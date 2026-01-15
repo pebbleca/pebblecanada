@@ -198,6 +198,27 @@ Pebble Canada supports Canada’s trade diversification objectives by strengthen
   @keyframes pebble-marquee{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
   .pebble-date{opacity:0.75; font-size:0.85em; margin-right:8px; white-space:nowrap; color:#000;}
   .pebble-src{opacity:0.7; font-size:0.82em; margin-left:10px; white-space:nowrap;}
+	  @media (max-width: 768px){
+    .pebble-ticker a{
+      padding: 8px 10px;
+      font-size: 0.8em;
+      line-height: 1.3;
+    }
+    .pebble-date{
+      font-size: 0.75em;
+      margin-right: 6px;
+    }
+    .pebble-src{
+      font-size: 0.72em;
+      margin-left: 6px;
+    }
+    .pebble-ticker-head strong{
+      font-size: 0.9em;
+    }
+    .pebble-ticker-head small{
+      font-size: 0.75em;
+    }
+  }
 </style>
 
 <div class="pebble-ticker-wrap" aria-live="polite">
