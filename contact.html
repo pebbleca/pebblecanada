@@ -191,7 +191,7 @@
           e.preventDefault();
 
           const action = form.getAttribute("action") || "";
-          if(action.indexOf("https://formspree.io/f/meeeogzg") !== -1){
+          if(action.indexOf("REPLACE_WITH_YOUR_FORM_ID") !== -1){
             // Fallback to mailto until Formspree is configured.
             const name = (form.querySelector('input[name="name"]') || {}).value || "";
             const email = (form.querySelector('input[name="email"]') || {}).value || "";
