@@ -156,7 +156,7 @@ h3 {
 }
 h4 {
     font-size: calc(24px + 16 * (100vw - 992px) / 1508);
-    font-weight: 300;
+    font-weight: 400;
 }
 h5 {
     font-size: 20px;
