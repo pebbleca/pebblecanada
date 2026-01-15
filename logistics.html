@@ -190,7 +190,7 @@ Pebble Canada supports Canada’s trade diversification objectives by strengthen
   .pebble-ticker-head{display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:rgba(0,0,0,0.02);}
   .pebble-ticker-head small{opacity:0.8;}
   .pebble-ticker{white-space:nowrap; overflow:hidden; position:relative;}
-  .pebble-ticker-inner{display:inline-block; padding-left:100%; animation:pebble-marquee 85s linear infinite;}
+  .pebble-ticker-inner{display:inline-block; padding-left:100%; animation:pebble-marquee 105s linear infinite;}
   .pebble-ticker:hover .pebble-ticker-inner{animation-play-state:paused;}
   .pebble-ticker a{display:inline-block; padding:12px 16px; text-decoration:none;}
   .pebble-ticker a:hover{text-decoration:underline;}
@@ -198,33 +198,12 @@ Pebble Canada supports Canada’s trade diversification objectives by strengthen
   @keyframes pebble-marquee{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
   .pebble-date{opacity:0.75; font-size:0.85em; margin-right:8px; white-space:nowrap; color:#000;}
   .pebble-src{opacity:0.7; font-size:0.82em; margin-left:10px; white-space:nowrap;}
-	  @media (max-width: 768px){
-    .pebble-ticker a{
-      padding: 8px 10px;
-      font-size: 0.8em;
-      line-height: 1.3;
-    }
-    .pebble-date{
-      font-size: 0.75em;
-      margin-right: 6px;
-    }
-    .pebble-src{
-      font-size: 0.72em;
-      margin-left: 6px;
-    }
-    .pebble-ticker-head strong{
-      font-size: 0.9em;
-    }
-    .pebble-ticker-head small{
-      font-size: 0.75em;
-    }
-  }
 </style>
 
 <div class="pebble-ticker-wrap" aria-live="polite">
   <div class="pebble-ticker-head">
     <strong>Live trade, logistics and supply chain marketplace updates</strong>
-    <small>Updates every 30 mins</small>
+    <small>Updates every 15 seconds</small>
   </div>
 
   <div class="pebble-ticker" role="region" aria-label="Trade, logistics and supply chain headlines">
@@ -344,7 +323,7 @@ Pebble Canada supports Canada’s trade diversification objectives by strengthen
     }
 
     loadFeeds();
-    setInterval(loadFeeds, 30 * 60 * 1000);
+    setInterval(loadFeeds, 15 * 1000);
   })();
 </script>
 
