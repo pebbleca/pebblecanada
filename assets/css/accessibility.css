@@ -1,0 +1,108 @@
+/*
+ * Pebble Canada — Accessibility Overrides
+ * WCAG 2.0 Level AA / Government of Canada Standard on Web Accessibility
+ * Loaded after style.css so these rules take priority.
+ */
+
+/* ── Skip Navigation Link ──────────────────────────────────────────────── */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 99999;
+  padding: 12px 20px;
+  background: #8228cf;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-bottom-right-radius: 4px;
+  transition: top 0.15s ease;
+}
+.skip-nav:focus {
+  top: 0;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ── Visually Hidden (screen-reader only) ──────────────────────────────── */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* ── Focus Indicators ──────────────────────────────────────────────────── */
+/*
+ * The theme sets outline: none on many elements.
+ * We restore visible focus rings for keyboard navigation.
+ * Using !important to override the theme's !important declarations.
+ */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+[tabindex]:focus {
+  outline: 3px solid #8228cf !important;
+  outline-offset: 2px !important;
+}
+
+/* Slightly different style for dark/image backgrounds (nav, slider) */
+.ms-header a:focus,
+.ms-header button:focus,
+.ms-navbar a:focus,
+.swiper-button-prev:focus,
+.swiper-button-next:focus,
+.ms-btn--slider:focus,
+.lang-btn:focus {
+  outline: 0px solid #fff !important;
+  outline-offset: 2px !important;
+	border-radius: 1px;
+}
+
+/* ── Social Icon Links ─────────────────────────────────────────────────── */
+/* Ensure icon-only links have a minimum touch/click target */
+.ms-footer .socials a,
+.cont-soc a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* ── About Page — Fix invalid h6-in-ul list ────────────────────────────── */
+/*
+ * The original markup had <ul><h6><li>...</li></h6></ul>.
+ * We output clean <ul class="pebble-list"><li>...</li></ul> instead.
+ */
+ul.pebble-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75em 0 1.25em;
+}
+ul.pebble-list li {
+  padding: 6px 0;
+  line-height: 1.6;
+}
+
+/* ── Form Controls ─────────────────────────────────────────────────────── */
+/* Ensure error states are perceivable by more than colour alone */
+.form-control:focus {
+  border-color: #8228cf !important;
+  box-shadow: 0 0 0 2px rgba(130, 40, 207, 0.25) !important;
+}
+
+/* ── High-contrast link underlines ────────────────────────────────────── */
+/* Body copy links should be distinguishable without relying on colour only */
+.about__info a:not(.ms-btn):not([class*="socicon"]) {
+  text-decoration: underline;
+}
