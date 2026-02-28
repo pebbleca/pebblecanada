@@ -175,21 +175,66 @@
           </p>
         </div>
       </div>
-
-    
+	<style>
+	.principles-list {
+        margin: 0px auto;
+        padding: 0 0px;
+      }
+     .principle-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .principle-item:last-child {
+        border-bottom: none;
+      }
+	 .principle-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px 0;
+		 border-bottom: 1px solid #eee;
+	}
+	.principle-item .check {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        background: linear-gradient(135deg, #8228cf 0%, #a855f7 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 16px;
+        margin-top: 2px;
+      }
+      .principle-item .check svg {
+        width: 12px;
+        height: 12px;
+        fill: #fff;
+      }
+	</style>
+    <div>
 	<hr width="100%" size="1.5" color="#8228cf" noshade>
         <h3>Outcomes</h3>
-      <ul>
-        <li>› Responsible and secure AI adoption</li>
-        <li>› Automation that improves productivity and service delivery</li>
-        <li>› Data visibility that strengthens planning and oversight</li>
-        <li>› Canadian capability building through practical delivery</li>
-      <li><span></span></li>
-      </ul>
-		<hr width="100%" size="1.5" color="#8228cf" noshade>
-	  </div>
+      <div class="principles-list">
+          <div class="principle-item">
+            <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <span>Responsible and secure AI adoption</span>
+          </div>
+          <div class="principle-item">
+            <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <span>Automation that improves productivity and service delivery</span>
+          </div>
+          <div class="principle-item">
+            <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <span>Data visibility that strengthens planning and oversight</span>
+          </div>
+          <div class="principle-item">
+            <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+            <span>Canadian capability building through practical delivery</span>
     </div>
   </div>
+</div>
 </div>
       </main>
       <!-- Footer -->
