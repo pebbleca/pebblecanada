@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pebble Canada</title>
+    <title>Logistics &amp; Supply Chain | Pebble Canada</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="International trade-focused supply chain resilience and coordination for Canadian organisations.">
     <link rel="icon" type="image/png" href="assets/images/ico/favicon.png" />
     <link rel="stylesheet" href="assets/css/plugins.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/accessibility.css">
   </head>
   <body>
+    <a href="#main-content" class="skip-nav" data-i18n="skip-nav">Skip to main content</a>
     <div class="ms-main-container">
       <div class="ms-preloader"></div>
       <!-- Header -->
-      <header class="ms-header">
-        <nav class="ms-nav">
+      <header class="ms-header" role="banner">
+        <nav class="ms-nav" aria-label="Main navigation">
           <div class="ms-logo">
-            <a href="index.html" data-type="page-transition">
-              <div class="logo-dark current"><img src="logo-dark.png" alt="logo image"></div>
-              <div class="logo-light"><img src="logo-light.png" alt="logo image"></div>
+            <a href="index.html" data-type="page-transition" aria-label="Pebble Canada — Home">
+              <div class="logo-dark current"><img src="logo-dark.png" alt="Pebble Canada"></div>
+              <div class="logo-light"><img src="logo-light.png" alt="Pebble Canada"></div>
             </a>
           </div>
-          <button class="hamburger" type="button" data-toggle="navigation">
+          <button class="hamburger" type="button" data-toggle="navigation" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
             <span class="hamburger-box">
               <span class="hamburger-label" data-i18n="hamburger-label">menu</span>
               <span class="hamburger-inner"></span>
             </span>
           </button>
-          <div class="height-full-viewport">
-            <ul class="ms-navbar">
+          <div class="height-full-viewport" id="main-nav">
+            <ul class="ms-navbar" role="list">
               <li class="nav-item">
                 <a href="index.html" data-type="page-transition">
                   <span class="ms-btn" data-i18n="nav-home">home</span>
@@ -75,11 +78,11 @@
         </nav>
       </header>
       <!-- Container -->
-      <main class="ms-container">
+      <main id="main-content" class="ms-container" role="main">
         <!-- Page Title -->
         <div class="ms-section__block">
           <div class="ms-page-title">
-            <h2 class="page-header" data-i18n-html="log-page-header">Logistics &amp; Supply Chain</h2>
+            <h1 class="page-header" data-i18n-html="log-page-header">Logistics &amp; Supply Chain</h1>
             <p class="page-desc" data-i18n="log-page-desc">International trade focused supply chain resilience and coordination.</p>
           </div>
         </div>
@@ -149,25 +152,25 @@
                 <div>
                   <hr width="100%" size="1.5" color="#8228cf" noshade>
                   <h3 data-i18n="log-focus-h3">Core Focus Areas</h3>
-                  <div class="principles-list">
-                    <div class="principle-item">
-                      <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                  <div class="principles-list" role="list">
+                    <div class="principle-item" role="listitem">
+                      <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
                       <span data-i18n="log-focus1">International logistics coordination across ocean and air freight</span>
                     </div>
-                    <div class="principle-item">
-                      <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="principle-item" role="listitem">
+                      <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
                       <span data-i18n="log-focus2">Supply chain planning and performance monitoring</span>
                     </div>
-                    <div class="principle-item">
-                      <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="principle-item" role="listitem">
+                      <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
                       <span data-i18n="log-focus3">Trade documentation readiness and operational support</span>
                     </div>
-                    <div class="principle-item">
-                      <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="principle-item" role="listitem">
+                      <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
                       <span data-i18n="log-focus4">Inventory strategy and continuity planning</span>
                     </div>
-                    <div class="principle-item">
-                      <div class="check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="principle-item" role="listitem">
+                      <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
                       <span data-i18n="log-focus5">Supplier diversification and dependency risk reduction</span>
                     </div>
                   </div>
@@ -179,14 +182,14 @@
         </div>
       </main>
       <!-- Footer -->
-      <footer>
+      <footer role="contentinfo">
         <div class="ms-footer">
           <div class="copyright" data-i18n="footer-copy">Copyright © 2026 Pebble CA Inc. All rights reserved.</div>
           <ul class="socials">
-            <li><a href="#" class="socicon-facebook"></a></li>
-            <li><a href="#" class="socicon-twitter"></a></li>
-            <li><a href="#" class="socicon-instagram"></a></li>
-            <li><a href="#" class="socicon-youtube"></a></li>
+            <li><a href="#" class="socicon-facebook" aria-label="Facebook"></a></li>
+            <li><a href="#" class="socicon-twitter" aria-label="Twitter / X"></a></li>
+            <li><a href="#" class="socicon-instagram" aria-label="Instagram"></a></li>
+            <li><a href="#" class="socicon-youtube" aria-label="YouTube"></a></li>
           </ul>
         </div>
       </footer>

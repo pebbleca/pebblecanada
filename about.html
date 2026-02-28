@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Pebble Canada</title>
+    <title>About Us | Pebble Canada</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn about Pebble Canada — a globally active solutions organization supporting complex programs across technology, logistics, defence, and workforce.">
     <link rel="icon" type="image/png" href="assets/images/ico/favicon.png" />
     <link rel="stylesheet" href="assets/css/plugins.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/accessibility.css">
   </head>
   <body>
+    <a href="#main-content" class="skip-nav" data-i18n="skip-nav">Skip to main content</a>
     <div class="ms-main-container">
       <div class="ms-preloader"></div>
 
       <!-- Header -->
-      <header class="ms-header">
-        <nav class="ms-nav">
+      <header class="ms-header" role="banner">
+        <nav class="ms-nav" aria-label="Main navigation">
           <div class="ms-logo">
-            <a href="index.html" data-type="page-transition">
-              <div class="logo-dark current"><img src="logo-dark.png" alt="logo image"></div>
-              <div class="logo-light"><img src="logo-light.png" alt="logo image"></div>
+            <a href="index.html" data-type="page-transition" aria-label="Pebble Canada — Home">
+              <div class="logo-dark current"><img src="logo-dark.png" alt="Pebble Canada"></div>
+              <div class="logo-light"><img src="logo-light.png" alt="Pebble Canada"></div>
             </a>
           </div>
-          <button class="hamburger" type="button" data-toggle="navigation">
+          <button class="hamburger" type="button" data-toggle="navigation" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
             <span class="hamburger-box">
               <span class="hamburger-label" data-i18n="hamburger-label">menu</span>
               <span class="hamburger-inner"></span>
             </span>
           </button>
-          <div class="height-full-viewport">
-            <ul class="ms-navbar">
+          <div class="height-full-viewport" id="main-nav">
+            <ul class="ms-navbar" role="list">
               <li class="nav-item"><a href="index.html" data-type="page-transition"><span class="ms-btn" data-i18n="nav-home">home</span></a></li>
               <li class="nav-item"><a href="technology.html" data-type="page-transition"><span class="ms-btn" data-i18n="nav-technology">technology</span></a></li>
               <li class="nav-item"><a href="workforce.html" data-type="page-transition"><span class="ms-btn" data-i18n="nav-workforce">workforce</span></a></li>
@@ -42,12 +45,12 @@
       </header>
 
       <!-- Main -->
-      <main class="ms-container">
+      <main id="main-content" class="ms-container" role="main">
 
         <!-- Title -->
         <div class="ms-section__block">
           <div class="ms-page-title">
-            <h2 class="page-header" data-i18n="about-page-header">About Pebble Canada</h2>
+            <h1 class="page-header" data-i18n="about-page-header">About Pebble Canada</h1>
             <p class="page-desc" data-i18n="about-page-desc">A Canada-focused organization advancing capability across technology, logistics, defence, and workforce.</p>
           </div>
         </div>
@@ -105,26 +108,26 @@
                 <h3 data-i18n="about-how-h3">How We Operate</h3>
                 <p data-i18n="about-how-p1">Pebble Canada operates with a delivery model designed for environments where scrutiny is high and failure is not an option. Our operating principles are consistent across sectors and geographies.</p>
 
-                <ul><h6>
+                <ul class="pebble-list">
                   <li data-i18n="about-how-li1">› Centralized governance with distributed execution</li>
                   <li data-i18n="about-how-li2">› Compliance aware delivery aligned to regulatory and contractual obligations</li>
                   <li data-i18n="about-how-li3">› Security, privacy, and data discipline embedded by design</li>
                   <li data-i18n="about-how-li4">› Clear reporting, audit readiness, and documentation standards</li>
                   <li data-i18n="about-how-li5">› Long term partnerships built on performance and trust</li>
-                </h6></ul>
+                </ul>
 
                 <hr width="100%" size="1.5" color="#8228cf" noshade>
 
                 <h3 data-i18n="about-eval-h3">What Clients and Partners Evaluate</h3>
                 <p data-i18n="about-eval-p1">Organizations engaging Pebble Canada often conduct extensive background research and due diligence. Our structure, processes, and documentation are designed to support common evaluation criteria across public and private sector engagements.</p>
 
-                <ul><h6>
+                <ul class="pebble-list">
                   <li data-i18n="about-eval-li1">› Governance, accountability, and escalation frameworks</li>
                   <li data-i18n="about-eval-li2">› Supply chain integrity, vendor due diligence, and continuity planning</li>
                   <li data-i18n="about-eval-li3">› Workforce screening, safety practices, and role based deployment</li>
                   <li data-i18n="about-eval-li4">› Information handling, access control, and responsible data use</li>
                   <li data-i18n="about-eval-li5">› Quality assurance, performance tracking, and delivery transparency</li>
-                </h6></ul>
+                </ul>
 
                 <p data-i18n="about-eval-p2">Pebble Canada exists to be a dependable execution partner in environments where outcomes matter, reputations are on the line, and delivery must stand up to scrutiny long after project completion.</p>
 
@@ -137,14 +140,14 @@
       </main>
 
       <!-- Footer -->
-      <footer>
+      <footer role="contentinfo">
         <div class="ms-footer">
           <div class="copyright" data-i18n="footer-copy">Copyright © 2026 Pebble CA Inc. All rights reserved.</div>
           <ul class="socials">
-            <li><a href="#" class="socicon-facebook"></a></li>
-            <li><a href="#" class="socicon-twitter"></a></li>
-            <li><a href="#" class="socicon-instagram"></a></li>
-            <li><a href="#" class="socicon-youtube"></a></li>
+            <li><a href="#" class="socicon-facebook" aria-label="Facebook"></a></li>
+            <li><a href="#" class="socicon-twitter" aria-label="Twitter / X"></a></li>
+            <li><a href="#" class="socicon-instagram" aria-label="Instagram"></a></li>
+            <li><a href="#" class="socicon-youtube" aria-label="YouTube"></a></li>
           </ul>
         </div>
       </footer>
