@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html><html>
+<html lang="en">
   <head>
     <title>Pebble Canada</title>
-    <!-- Metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon --><link rel="icon" type="image/png" href="assets/images/ico/favicon.png" />
-    <!-- CSS Plugins -->
+    <link rel="icon" type="image/png" href="assets/images/ico/favicon.png" />
     <link rel="stylesheet" href="assets/css/plugins.min.css">
-    <!-- Custom CSS File -->
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
 
@@ -27,59 +24,52 @@
           </div>
           <button class="hamburger" type="button" data-toggle="navigation">
             <span class="hamburger-box">
-              <span class="hamburger-label">menu</span>
+              <span class="hamburger-label" data-i18n="hamburger-label">menu</span>
               <span class="hamburger-inner"></span>
             </span>
           </button>
           <div class="height-full-viewport">
             <ul class="ms-navbar">
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="index.html" data-type="page-transition">
-                  <span class="ms-btn">home</span>
-                  <span class="nav-item__label">Back to home page</span>
+                  <span class="ms-btn" data-i18n="nav-home">home</span>
+                  <span class="nav-item__label" data-i18n="nav-home-label">Back to home page</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="technology.html" data-type="page-transition">
-                  <span class="ms-btn">technology</span>
-                  <span class="nav-item__label">Learn More</span>
+                  <span class="ms-btn" data-i18n="nav-technology">technology</span>
+                  <span class="nav-item__label" data-i18n="nav-technology-label">Learn More</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="workforce.html" data-type="page-transition">
-                  <span class="ms-btn">workforce</span>
-                  <span class="nav-item__label">Learn More</span>
+                  <span class="ms-btn" data-i18n="nav-workforce">workforce</span>
+                  <span class="nav-item__label" data-i18n="nav-workforce-label">Learn More</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="defence.html" data-type="page-transition">
-                  <span class="ms-btn">defence</span>
-                  <span class="nav-item__label">Learn More</span>
+                  <span class="ms-btn" data-i18n="nav-defence">defence</span>
+                  <span class="nav-item__label" data-i18n="nav-defence-label">Learn More</span>
                 </a>
               </li>
-				<!-- Nav Link -->
               <li class="nav-item">
                 <a href="logistics.html" data-type="page-transition">
-                  <span class="ms-btn">logistics</span>
-                  <span class="nav-item__label">Learn More</span>
+                  <span class="ms-btn" data-i18n="nav-logistics">logistics</span>
+                  <span class="nav-item__label" data-i18n="nav-logistics-label">Learn More</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="about.html" data-type="page-transition">
-                  <span class="ms-btn">about</span>
-                  <span class="nav-item__label">Learn more about us</span>
+                  <span class="ms-btn" data-i18n="nav-about">about</span>
+                  <span class="nav-item__label" data-i18n="nav-about-label">Learn more about us</span>
                 </a>
               </li>
-              <!-- Nav Link -->
               <li class="nav-item">
                 <a href="contact.html" data-type="page-transition">
-                  <span class="ms-btn">contact</span>
-                  <span class="nav-item__label">Get in touch</span>
+                  <span class="ms-btn" data-i18n="nav-contact">contact</span>
+                  <span class="nav-item__label" data-i18n="nav-contact-label">Get in touch</span>
                 </a>
               </li>
             </ul>
@@ -91,26 +81,25 @@
         <!-- Page Title -->
         <div class="ms-section__block">
           <div class="ms-page-title">
-            <h2 class="page-header">Let's work together</h2>
-            <p class="page-desc">Reach out to explore partnerships across our four pillars.</p>
+            <h2 class="page-header" data-i18n="contact-page-header">Let's work together</h2>
+            <p class="page-desc" data-i18n="contact-page-desc">Reach out to explore partnerships across our four pillars.</p>
           </div>
         </div>
         <!-- Page Content -->
         <div class="ms-section__block">
           <div id="contact" class="row">
-          <div class="col-md-6">
-            <div class="row">
+            <div class="col-md-6">
+              <div class="row">
                 <div class="col-md-6">
-                  <h6>the office</h6>
-                  <p>2482 Yonge St, Unit #93 <br>
-					  Toronto, ON, M4P 2H5</p></br>
+                  <h6 data-i18n="contact-office-h6">the office</h6>
+                  <p>2482 Yonge St, Unit #93 <br>Toronto, ON, M4P 2H5</p><br>
                 </div>
                 <div class="col-md-6">
-                  <h6>telephone</h6>
+                  <h6 data-i18n="contact-tel-h6">telephone</h6>
                   <p>+1 (647) 771 6776</p>
                 </div>
                 <div class="col-md-6">
-                  <h6>email</h6>
+                  <h6 data-i18n="contact-email-h6">email</h6>
                   <p>hello@pebblecanada.ca</p>
                 </div>
                 <div class="col-md-6 cont-soc">
@@ -124,23 +113,24 @@
               </div>
             </div>
             <div class="col-md-6">
-              <h6>Get in touch</h6>
-              <form id="validForm" action="https://formspree.io/f/meeeogzg" method="POST">
+              <h6 data-i18n="contact-form-h6">Get in touch</h6>
+              <form id="validForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <input type="text" name="name" class="form-control" id="cl" placeholder="Your name" autocomplete="off">
+                    <input type="text" name="name" class="form-control" id="cl" data-i18n-placeholder="contact-name-ph" placeholder="Your name" autocomplete="off">
                   </div>
                   <div class="form-group col-md-6">
-                    <input type="email" name="email" class="form-control" placeholder="Email address" autocomplete="off">
+                    <input type="email" name="email" class="form-control" data-i18n-placeholder="contact-email-ph" placeholder="Email address" autocomplete="off">
                   </div>
                   <div class="form-group col-md-12">
-                    <input type="text" name="subject" class="form-control" placeholder="Subject">
+                    <input type="text" name="subject" class="form-control" data-i18n-placeholder="contact-subject-ph" placeholder="Subject">
                   </div>
                   <div class="form-group col-md-12">
-                    <textarea name="message" class="form-control" id="message" placeholder="Your message"></textarea>
+                    <textarea name="message" class="form-control" id="message" data-i18n-placeholder="contact-message-ph" placeholder="Your message"></textarea>
                   </div>
                   <div class="col-md-12">
-                    <div class="ms-button" data-title="send">Send
+                    <div class="ms-button" data-title="send">
+                      <span data-i18n="contact-send">Send</span>
                       <input type="submit" value="send">
                     </div>
                   </div>
@@ -148,13 +138,13 @@
               </form>
               <p id="formStatus" style="display:none; margin-top:12px;"></p>
             </div>
-            </div>
+          </div>
         </div>
       </main>
       <!-- Footer -->
       <footer>
         <div class="ms-footer">
-          <div class="copyright">Copyright © 2026 Pebble CA Inc. All rights reserved. </div>
+          <div class="copyright" data-i18n="footer-copy">Copyright © 2026 Pebble CA Inc. All rights reserved.</div>
           <ul class="socials">
             <li><a href="#" class="socicon-facebook"></a></li>
             <li><a href="#" class="socicon-twitter"></a></li>
@@ -164,20 +154,17 @@
         </div>
       </footer>
     </div>
-    <!-- JS Libraries -->
-    <!-- jquery-2.1.3.min js -->
     <script type="text/javascript" src='assets/js/jquery-3.2.1.min.js'></script>
-    <!-- Vendors -->
     <script type="text/javascript" src='assets/js/plugins.min.js'></script>
-    <!-- Main js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/lang.js"></script>
 
     <script>
       (function(){
-        const form = document.getElementById("validForm");
+        var form = document.getElementById("validForm");
         if(!form) return;
 
-        const statusEl = document.getElementById("formStatus");
+        var statusEl = document.getElementById("formStatus");
         function showStatus(msg, ok){
           if(!statusEl) return;
           statusEl.style.display = "block";
@@ -190,33 +177,21 @@
         form.addEventListener("submit", async function(e){
           e.preventDefault();
 
-          const action = form.getAttribute("action") || "";
+          var action = form.getAttribute("action") || "";
           if(action.indexOf("REPLACE_WITH_YOUR_FORM_ID") !== -1){
-            // Fallback to mailto until Formspree is configured.
-            const name = (form.querySelector('input[name="name"]') || {}).value || "";
-            const email = (form.querySelector('input[name="email"]') || {}).value || "";
-            const subject = (form.querySelector('input[name="subject"]') || {}).value || "Website contact";
-            const message = (form.querySelector('textarea[name="message"]') || {}).value || "";
-            const body = encodeURIComponent(
-              "Name: " + name + "\n" +
-              "Email: " + email + "\n\n" +
-              message
-            );
-
-            // Replace this inbox with your real address
+            var name = (form.querySelector('input[name="name"]') || {}).value || "";
+            var email = (form.querySelector('input[name="email"]') || {}).value || "";
+            var subject = (form.querySelector('input[name="subject"]') || {}).value || "Website contact";
+            var message = (form.querySelector('textarea[name="message"]') || {}).value || "";
+            var body = encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\n" + message);
             window.location.href = "mailto:hello@pebblecanada.ca?subject=" + encodeURIComponent(subject) + "&body=" + body;
-            showStatus("Opening your email app to send the message. Replace the Form ID to enable direct form submission.", true);
+            showStatus("Opening your email app to send the message.", true);
             return;
           }
 
           try{
-            const formData = new FormData(form);
-            const res = await fetch(action, {
-              method: "POST",
-              body: formData,
-              headers: { "Accept": "application/json" }
-            });
-
+            var formData = new FormData(form);
+            var res = await fetch(action, { method:"POST", body:formData, headers:{"Accept":"application/json"} });
             if(res.ok){
               form.reset();
               showStatus("Message sent. We will respond as soon as possible.", true);
@@ -231,5 +206,4 @@
     </script>
 
   </body>
-
 </html>
