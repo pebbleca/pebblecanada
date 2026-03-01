@@ -12,6 +12,9 @@
   var T = {
     en: {
 
+      /* ── Accessibility ── */
+      'skip-nav': 'Skip to main content',
+
       /* ── Navigation (shared) ── */
       'nav-home':              'home',
       'nav-home-label':        'Back to home page',
@@ -214,14 +217,21 @@
       'contact-tel-h6':      'telephone',
       'contact-email-h6':    'email',
       'contact-form-h6':     'Get in touch',
-      'contact-name-ph':     'Your name',
-      'contact-email-ph':    'Email address',
-      'contact-subject-ph':  'Subject',
-      'contact-message-ph':  'Your message',
-      'contact-send':        'Send'
+      'contact-name-ph':      'Your name',
+      'contact-email-ph':     'Email address',
+      'contact-subject-ph':   'Subject',
+      'contact-message-ph':   'Your message',
+      'contact-send':         'Send',
+      'contact-name-label':   'Your name',
+      'contact-email-label':  'Email address',
+      'contact-subject-label':'Subject',
+      'contact-message-label':'Your message'
     },
 
     fr: {
+
+      /* ── Accessibility ── */
+      'skip-nav': 'Passer au contenu principal',
 
       /* ── Navigation (shared) ── */
       'nav-home':              'accueil',
@@ -425,11 +435,15 @@
       'contact-tel-h6':      't\u00e9l\u00e9phone',
       'contact-email-h6':    'courriel',
       'contact-form-h6':     'Nous contacter',
-      'contact-name-ph':     'Votre nom',
-      'contact-email-ph':    'Adresse courriel',
-      'contact-subject-ph':  'Sujet',
-      'contact-message-ph':  'Votre message',
-      'contact-send':        'Envoyer'
+      'contact-name-ph':      'Votre nom',
+      'contact-email-ph':     'Adresse courriel',
+      'contact-subject-ph':   'Sujet',
+      'contact-message-ph':   'Votre message',
+      'contact-send':         'Envoyer',
+      'contact-name-label':   'Votre nom',
+      'contact-email-label':  'Adresse courriel',
+      'contact-subject-label':'Sujet',
+      'contact-message-label':'Votre message'
     }
   };
 
