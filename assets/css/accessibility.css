@@ -113,31 +113,6 @@ ul.pebble-list li {
   text-decoration: none !important;
 }
 
-/* ── Footer Navigation ─────────────────────────────────────────────────── */
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 10px;
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  opacity: 0.55;
-}
-.footer-nav a {
-  color: inherit;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.footer-nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-.footer-nav span {
-  opacity: 0.6;
-}
-
 /* ── Legal footer links (Privacy Policy · Accessibility) ──────────────── */
 .legal-footer-links {
   display: flex;
