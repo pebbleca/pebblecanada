@@ -142,10 +142,13 @@ ul.pebble-list li {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 10px;
   margin-top: 10px;
   font-size: 11px;
+  font-family: inherit;
+  font-weight: normal;
+  line-height: inherit;
   letter-spacing: 0.5px;
   opacity: 0.55;
 }
@@ -153,6 +156,10 @@ ul.pebble-list li {
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 11px;
+  letter-spacing: 0.5px;
 }
 .footer-nav a:hover {
   opacity: 1;
