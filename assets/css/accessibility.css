@@ -169,6 +169,18 @@ ul.pebble-list li {
   opacity: 0.6;
 }
 
+/* ── Full-width content dividers ───────────────────────────────────────── */
+.ms-section__block hr {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  height: 1px;
+}
+.ms-main-container {
+  overflow-x: hidden;
+}
+
 /* ── Remove excess space before footer ──────────────────────────────────── */
 .ms-container {
   padding-bottom: 0 !important;
