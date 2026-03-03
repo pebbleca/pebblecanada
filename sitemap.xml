@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
+  <!-- Core Pages -->
   <url>
     <loc>https://pebblecanada.ca/</loc>
     <lastmod>2026-03-03</lastmod>
@@ -9,6 +10,7 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Service Pillars -->
   <url>
     <loc>https://pebblecanada.ca/technology/</loc>
     <lastmod>2026-03-03</lastmod>
@@ -53,6 +55,7 @@
     </image:image>
   </url>
 
+  <!-- About & Contact -->
   <url>
     <loc>https://pebblecanada.ca/about/</loc>
     <lastmod>2026-03-03</lastmod>
@@ -71,6 +74,73 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Expanded Content Pages -->
+  <url>
+    <loc>https://pebblecanada.ca/capabilities/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pebblecanada.ca/sectors/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://pebblecanada.ca/newsroom/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Insights Hub -->
+  <url>
+    <loc>https://pebblecanada.ca/insights/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Insight Articles -->
+  <url>
+    <loc>https://pebblecanada.ca/insights/canada-ai-productivity/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pebblecanada.ca/insights/critical-minerals-workforce/</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pebblecanada.ca/insights/defence-procurement-canada/</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pebblecanada.ca/insights/supply-chain-resilience/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://pebblecanada.ca/insights/offshore-workforce-model/</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal -->
   <url>
     <loc>https://pebblecanada.ca/privacy-policy/</loc>
     <lastmod>2026-03-03</lastmod>
