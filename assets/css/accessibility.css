@@ -168,3 +168,41 @@ ul.pebble-list li {
 .footer-nav span {
   opacity: 0.6;
 }
+
+/* ── Remove excess space before footer ──────────────────────────────────── */
+.ms-container {
+  padding-bottom: 0 !important;
+}
+.ms-section__block:last-of-type {
+  margin-bottom: 2em !important;
+}
+#about .row:last-of-type {
+  margin-bottom: 2em !important;
+}
+
+/* ── Footer layout override: stack vertically, center everything ─────────── */
+footer {
+  bottom: 0 !important;
+}
+.ms-footer {
+  flex-direction: column !important;
+  align-items: center !important;
+  padding-top: 20px !important;
+  padding-bottom: 2.5em !important;
+}
+
+/* ── Footer Copyright ───────────────────────────────────────────────────── */
+.ms-footer .copyright {
+  display: block;
+  text-align: center;
+  font-size: 11px !important;
+  font-family: inherit !important;
+  font-weight: normal !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  color: #000 !important;
+  opacity: 0.55;
+  padding: 0 !important;
+  margin: 20px 0 0 0 !important;
+  float: none !important;
+}
