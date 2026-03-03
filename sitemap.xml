@@ -100,7 +100,7 @@
   <url>
     <loc>https://pebblecanada.ca/insights/</loc>
     <lastmod>2026-03-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
@@ -114,14 +114,14 @@
 
   <url>
     <loc>https://pebblecanada.ca/insights/critical-minerals-workforce/</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://pebblecanada.ca/insights/defence-procurement-canada/</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -135,7 +135,7 @@
 
   <url>
     <loc>https://pebblecanada.ca/insights/offshore-workforce-model/</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
