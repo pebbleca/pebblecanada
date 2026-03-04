@@ -17,21 +17,13 @@
 
       /* ── Navigation (shared) ── */
       'nav-home':              'home',
-      'nav-home-label':        '',
       'nav-technology':        'technology',
-      'nav-technology-label':  'AI and digital delivery',
       'nav-workforce':         'workforce',
-      'nav-workforce-label':   'Labour readiness and deployment',
       'nav-defence':           'defence',
-      'nav-defence-label':     'Procurement and sustainment',
       'nav-logistics':         'logistics',
-      'nav-logistics-label':   'Supply chain and trade corridors',
       'nav-about':             'about',
-      'nav-about-label':       'Our story and leadership',
       'nav-contact':           'contact',
-      'nav-contact-label':     'Reach our team',
       'nav-insights':          'insights',
-      'nav-insights-label':    'Analysis and perspectives',
       'hamburger-label':       'menu',
       'footer-copy':           'Copyright \u00a9 2026 Pebble CA Inc. All rights reserved.',
 
@@ -432,21 +424,13 @@
 
       /* ── Navigation (shared) ── */
       'nav-home':              'accueil',
-      'nav-home-label':        '',
       'nav-technology':        'technologie',
-      'nav-technology-label':  'IA et prestation num\u00e9rique',
       'nav-workforce':         "main-d\u2019\u0153uvre",
-      'nav-workforce-label':   "Pr\u00e9paration et d\u00e9ploiement de la main-d\u2019\u0153uvre",
       'nav-defence':           'd\u00e9fense',
-      'nav-defence-label':     'Approvisionnement et soutien en service',
       'nav-logistics':         'logistique',
-      'nav-logistics-label':   "Cha\u00eene d\u2019approvisionnement et corridors commerciaux",
       'nav-about':             '\u00e0 propos',
-      'nav-about-label':       'Notre histoire et notre direction',
       'nav-contact':           'contact',
-      'nav-contact-label':     'Joindre notre \u00e9quipe',
       'nav-insights':          'perspectives',
-      'nav-insights-label':    'Analyses et perspectives',
       'hamburger-label':       'menu',
       'footer-copy':           'Copyright \u00a9 2026 Pebble CA Inc. Tous droits r\u00e9serv\u00e9s.',
 
