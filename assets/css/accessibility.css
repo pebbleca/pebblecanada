@@ -840,3 +840,51 @@ a:focus,
 a:active {
   text-decoration: none !important;
 }
+
+/* ── Mobile horizontal overflow fix ─────────────────────────────────────── */
+/*
+ * Bootstrap 4 does not define .center-block. As a flex item inside .row,
+ * it defaults to width:auto / min-width:auto, which allows content to
+ * grow wider than the viewport. Setting width:100% and min-width:0
+ * constrains it correctly so text wraps instead of being clipped.
+ */
+.center-block {
+  width: 100%;
+  min-width: 0;
+}
+
+/*
+ * Prevent any long unbreakable strings (URLs, tokens, etc.) from
+ * punching through column boundaries on small screens.
+ */
+.about__info,
+.about__info p,
+.about__info h3,
+.about__info h4,
+.pc-article-body,
+.pc-article-body p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media only screen and (max-width: 767px) {
+  /*
+   * Bootstrap .row negative margins (-15px each side) can push content
+   * outside the viewport on narrow screens. Clipping at .ms-section__block
+   * level ensures nothing leaks beyond the page edge without disturbing
+   * sticky/fixed elements higher up in the DOM.
+   */
+  .ms-section__block {
+    overflow-x: hidden;
+  }
+
+  /* Tighten nested row gutters inside article body on mobile */
+  .about__info > .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .about__info > .row > [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
