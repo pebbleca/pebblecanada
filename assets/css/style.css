@@ -1248,6 +1248,7 @@ footer {
 
 @media only screen and (max-width: 805px) {
     h1,
+    .slide-inner--info h1,
     .slide-inner--info h2.slide-title {
         font-size: calc(48px + 1vw);
     }
