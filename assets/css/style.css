@@ -564,17 +564,23 @@ p {
     font-size: 0.65em !important;
     text-transform: uppercase;
     letter-spacing: .05em;
-    color: #fff;
+    color: #fff !important;
+    padding-left: 1.6rem !important;
     transition: all .3s ease;
+}
+.ms-btn--sub::before {
+    background: #fff !important;
+    width: 1rem !important;
 }
 .nav-sub a:hover .ms-btn--sub,
 .nav-sub a:focus .ms-btn--sub {
-    color: #8228cf;
-    padding-left: 1.6rem;
+    color: #8228cf !important;
+    padding-left: 2.4rem !important;
 }
 .nav-sub a:hover .ms-btn--sub::before,
 .nav-sub a:focus .ms-btn--sub::before {
-    width: 1.2rem;
+    background: #8228cf !important;
+    width: 2rem !important;
 }
 
 /**
