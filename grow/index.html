@@ -372,11 +372,17 @@
         line-height: 1.45;
       }
       .pc-pricing-features li .check {
-        color: #8228CF;
-        font-weight: 700;
-        font-size: 1.1em;
+        display: inline-block;
+        width: 8px;
+        height: 14px;
+        border-right: 2px solid #8228CF;
+        border-bottom: 2px solid #8228CF;
+        transform: rotate(40deg);
         flex-shrink: 0;
-        margin-top: 1px;
+        margin-top: 0;
+        font-size: 0;
+        color: transparent;
+        overflow: hidden;
       }
       .pc-pricing-cta {
         display: block;
