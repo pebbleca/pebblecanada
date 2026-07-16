@@ -564,7 +564,7 @@ p {
     font-size: 0.65em !important;
     text-transform: uppercase;
     letter-spacing: .05em;
-    color: rgba(255,255,255,0.7);
+    color: #fff;
     transition: all .3s ease;
 }
 .nav-sub a:hover .ms-btn--sub,
