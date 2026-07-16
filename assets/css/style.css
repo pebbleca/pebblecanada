@@ -535,6 +535,36 @@ p {
     width: 2rem;
 }
 
+/* 2.4 Sub-navigation (Grow under Technology) */
+
+.nav-sub {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 2.5em;
+}
+.nav-sub li {
+    padding: 0.15em 0;
+}
+.nav-sub a {
+    display: block;
+}
+.ms-btn--sub {
+    font-size: 0.65em !important;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: rgba(255,255,255,0.7);
+    transition: all .3s ease;
+}
+.nav-sub a:hover .ms-btn--sub,
+.nav-sub a:focus .ms-btn--sub {
+    color: #8228cf;
+    padding-left: 1.6rem;
+}
+.nav-sub a:hover .ms-btn--sub::before,
+.nav-sub a:focus .ms-btn--sub::before {
+    width: 1.2rem;
+}
+
 /**
  * 3. Pages Style
  */

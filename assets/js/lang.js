@@ -18,6 +18,7 @@
       /* ── Navigation (shared) ── */
       'nav-home':              'home',
       'nav-technology':        'technology',
+      'nav-grow':              'grow',
       'nav-workforce':         'workforce',
       'nav-defence':           'defence',
       'nav-logistics':         'logistics',
@@ -941,6 +942,7 @@
       /* ── Navigation (shared) ── */
       'nav-home':              'accueil',
       'nav-technology':        'technologie',
+      'nav-grow':              'croissance',
       'nav-workforce':         "main-d\u2019\u0153uvre",
       'nav-defence':           'd\u00e9fense',
       'nav-logistics':         'logistique',
