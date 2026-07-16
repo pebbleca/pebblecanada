@@ -107,30 +107,13 @@
         line-height: 1.5;
         margin: 0;
       }
-      /* Bar chart */
-      .pc-bento-bars {
-        display: flex;
-        align-items: flex-end;
-        gap: 14px;
-        height: 120px;
+      /* Growth line chart */
+      .pc-bento-chart {
         margin-top: 16px;
       }
-      .pc-bento-bar-group {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-      }
-      .pc-bento-bar {
+      .pc-bento-chart svg {
         width: 100%;
-        border-radius: 6px 6px 0 0;
-        transition: height 0.6s ease;
-      }
-      .pc-bento-bar-label {
-        font-size: 0.7em;
-        color: #888;
-        font-weight: 600;
+        height: 160px;
       }
       /* Mini stat row */
       .pc-bento-stats-row {
@@ -553,31 +536,44 @@
                   <p class="pc-bento-label" data-i18n="pricing-bento-growth-label">Average Audience Growth</p>
                   <p class="pc-bento-big" data-i18n="pricing-bento-growth-big">2.7x</p>
                   <p class="pc-bento-sub" data-i18n="pricing-bento-growth-sub">Average follower growth within 6 months of partnering with Pebble</p>
-                  <div class="pc-bento-bars">
-                    <div class="pc-bento-bar-group">
-                      <div class="pc-bento-bar" style="height:25%;background:#e0d0f0;"></div>
-                      <span class="pc-bento-bar-label" data-i18n="pricing-bento-month1">Month 1</span>
-                    </div>
-                    <div class="pc-bento-bar-group">
-                      <div class="pc-bento-bar" style="height:40%;background:#d1b3ef;"></div>
-                      <span class="pc-bento-bar-label" data-i18n="pricing-bento-month2">Month 2</span>
-                    </div>
-                    <div class="pc-bento-bar-group">
-                      <div class="pc-bento-bar" style="height:55%;background:#b98de6;"></div>
-                      <span class="pc-bento-bar-label" data-i18n="pricing-bento-month3">Month 3</span>
-                    </div>
-                    <div class="pc-bento-bar-group">
-                      <div class="pc-bento-bar" style="height:70%;background:#a06adc;"></div>
-                      <span class="pc-bento-bar-label" data-i18n="pricing-bento-month4">Month 4</span>
-                    </div>
-                    <div class="pc-bento-bar-group">
-                      <div class="pc-bento-bar" style="height:85%;background:#8f4bd4;"></div>
-                      <span class="pc-bento-bar-label" data-i18n="pricing-bento-month5">Month 5</span>
-                    </div>
-                    <div class="pc-bento-bar-group">
-                      <div class="pc-bento-bar" style="height:100%;background:#8228CF;"></div>
-                      <span class="pc-bento-bar-label" data-i18n="pricing-bento-month6">Month 6</span>
-                    </div>
+                  <div class="pc-bento-chart">
+                    <svg viewBox="0 0 500 160" preserveAspectRatio="none" aria-label="Audience growth chart showing organic growth over 6 months">
+                      <!-- Grid lines -->
+                      <line x1="60" y1="20" x2="480" y2="20" stroke="#f0e6fa" stroke-width="0.5"/>
+                      <line x1="60" y1="50" x2="480" y2="50" stroke="#f0e6fa" stroke-width="0.5"/>
+                      <line x1="60" y1="80" x2="480" y2="80" stroke="#f0e6fa" stroke-width="0.5"/>
+                      <line x1="60" y1="110" x2="480" y2="110" stroke="#f0e6fa" stroke-width="0.5"/>
+                      <!-- Y-axis labels -->
+                      <text x="50" y="113" text-anchor="end" font-size="9" fill="#bbb" font-family="inherit">1.0x</text>
+                      <text x="50" y="83" text-anchor="end" font-size="9" fill="#bbb" font-family="inherit">1.5x</text>
+                      <text x="50" y="53" text-anchor="end" font-size="9" fill="#bbb" font-family="inherit">2.0x</text>
+                      <text x="50" y="23" text-anchor="end" font-size="9" fill="#bbb" font-family="inherit">2.7x</text>
+                      <!-- Gradient fill under curve -->
+                      <defs>
+                        <linearGradient id="growFill" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stop-color="#8228CF" stop-opacity="0.18"/>
+                          <stop offset="100%" stop-color="#8228CF" stop-opacity="0.02"/>
+                        </linearGradient>
+                      </defs>
+                      <path d="M80,110 C105,108 120,82 150,72 C175,64 200,60 220,58 C245,56 265,57 290,55 C310,53 330,42 360,34 C385,28 410,22 430,20 L430,130 L80,130 Z" fill="url(#growFill)"/>
+                      <!-- Growth line — organic curve with plateau around months 3-4 -->
+                      <path d="M80,110 C105,108 120,82 150,72 C175,64 200,60 220,58 C245,56 265,57 290,55 C310,53 330,42 360,34 C385,28 410,22 430,20"
+                        fill="none" stroke="#8228CF" stroke-width="2.5" stroke-linecap="round"/>
+                      <!-- Data points -->
+                      <circle cx="80"  cy="110" r="4" fill="#fff" stroke="#8228CF" stroke-width="2"/>
+                      <circle cx="150" cy="72"  r="4" fill="#fff" stroke="#8228CF" stroke-width="2"/>
+                      <circle cx="220" cy="58"  r="4" fill="#fff" stroke="#a06adc" stroke-width="2"/>
+                      <circle cx="290" cy="55"  r="4" fill="#fff" stroke="#a06adc" stroke-width="2"/>
+                      <circle cx="360" cy="34"  r="4" fill="#fff" stroke="#8228CF" stroke-width="2"/>
+                      <circle cx="430" cy="20"  r="4" fill="#8228CF" stroke="#8228CF" stroke-width="2"/>
+                      <!-- X-axis month labels -->
+                      <text x="80"  y="148" text-anchor="middle" font-size="9" fill="#999" font-family="inherit" data-i18n="pricing-bento-month1">Month 1</text>
+                      <text x="150" y="148" text-anchor="middle" font-size="9" fill="#999" font-family="inherit" data-i18n="pricing-bento-month2">Month 2</text>
+                      <text x="220" y="148" text-anchor="middle" font-size="9" fill="#999" font-family="inherit" data-i18n="pricing-bento-month3">Month 3</text>
+                      <text x="290" y="148" text-anchor="middle" font-size="9" fill="#999" font-family="inherit" data-i18n="pricing-bento-month4">Month 4</text>
+                      <text x="360" y="148" text-anchor="middle" font-size="9" fill="#999" font-family="inherit" data-i18n="pricing-bento-month5">Month 5</text>
+                      <text x="430" y="148" text-anchor="middle" font-size="9" fill="#999" font-family="inherit" data-i18n="pricing-bento-month6">Month 6</text>
+                    </svg>
                   </div>
                 </div>
 
