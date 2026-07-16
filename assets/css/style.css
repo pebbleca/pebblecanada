@@ -541,6 +541,18 @@ p {
     list-style: none;
     padding: 0;
     margin: 0 0 0 2.5em;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity .3s ease .05s;
+}
+.nav-item--has-sub:hover > .nav-sub,
+.nav-item--has-sub:focus-within > .nav-sub {
+    max-height: 4em;
+    opacity: 1;
+    transition: max-height .4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity .3s ease;
 }
 .nav-sub li {
     padding: 0.15em 0;
