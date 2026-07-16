@@ -786,6 +786,7 @@ p {
     margin: 10px 0;
     text-transform: uppercase;
     font-weight: 900;
+    font-size: calc(80px + 1vw);
     line-height: 1em;
     color: #fff;
 }
@@ -1246,7 +1247,8 @@ footer {
  */
 
 @media only screen and (max-width: 805px) {
-    h1 {
+    h1,
+    .slide-inner--info h2.slide-title {
         font-size: calc(48px + 1vw);
     }
     h6 {
