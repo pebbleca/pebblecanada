@@ -202,28 +202,19 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
           }
-          .pc-li-card-footer {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            font-size: 0.72em;
-            color: #888;
+          .pc-li-card-cta {
+            font-size: 0.76em;
+            font-weight: 600;
+            color: #0A66C2;
             border-top: 1px solid #f0f0f0;
             padding-top: 10px;
+            margin-top: auto;
           }
-          .pc-li-card-footer span {
-            display: flex;
-            align-items: center;
-            gap: 4px;
+          .pc-li-card-cta span {
+            transition: margin-left 0.2s;
           }
-          .pc-li-card-tag {
-            margin-left: auto;
-            background: #f0e8fa;
-            color: #8228CF;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.95em;
+          .pc-li-card:hover .pc-li-card-cta span {
+            margin-left: 4px;
           }
 
           @media (max-width: 600px) {

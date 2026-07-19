@@ -1,0 +1,97 @@
+name: Update LinkedIn Feed
+
+on:
+  schedule:
+    # Run daily at 6:00 AM UTC (2:00 AM ET)
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'How to update the feed'
+        required: true
+        type: choice
+        options:
+          - auto-scrape
+          - manual-add
+        default: auto-scrape
+      post_url:
+        description: '[manual-add only] Direct URL to the LinkedIn post'
+        required: false
+        type: string
+      post_text:
+        description: '[manual-add only] Post text (first ~200 chars)'
+        required: false
+        type: string
+      post_date:
+        description: '[manual-add only] Post date (e.g. Jul 15, 2026). Blank = today.'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  # ── Job 1: Daily auto-scrape ──────────────────────────────────────────
+  scrape:
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'auto-scrape')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Scrape LinkedIn posts
+        run: python tools/scrape-linkedin.py
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git diff --quiet assets/js/linkedin-posts.js && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/js/linkedin-posts.js
+          git commit -m "chore: update LinkedIn feed from scrape [automated]"
+          git push
+
+  # ── Job 2: Manual single-post add ────────────────────────────────────
+  manual-add:
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.mode == 'manual-add'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add post to linkedin-posts.js
+        run: |
+          python3 tools/add-linkedin-post.py \
+            --url "${{ github.event.inputs.post_url }}" \
+            --text "${{ github.event.inputs.post_text }}" \
+            --date "${{ github.event.inputs.post_date }}"
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git diff --quiet assets/js/linkedin-posts.js && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/js/linkedin-posts.js
+          git commit -m "chore: add LinkedIn post to ticker [automated]"
+          git push
