@@ -291,6 +291,7 @@
         gap: 28px;
         max-width: 1060px;
         margin: 0 auto 56px;
+        scroll-margin-top: 40px;
       }
       @media (max-width: 860px) {
         .pc-pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
@@ -882,12 +883,12 @@
               </div>
 
               <!-- Pricing intro -->
-              <div class="pc-pricing-intro" id="pricing-plans">
+              <div class="pc-pricing-intro">
                 <p data-i18n="pricing-intro">Every plan is powered by our proprietary AI analytics stack: predictive audience modelling, semantic content optimization, and real-time performance intelligence. Your dedicated strategist translates these insights into daily, platform-native content in your brand voice. Pick the scope that fits your growth objectives.</p>
               </div>
 
               <!-- Pricing cards -->
-              <div class="pc-pricing-grid">
+              <div class="pc-pricing-grid" id="pricing-plans">
 
                 <!-- BASIC -->
                 <div class="pc-pricing-card">
