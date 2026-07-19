@@ -381,7 +381,8 @@
         gap: 10px;
         line-height: 1.45;
       }
-      .pc-pricing-features li .check {
+      .pc-pricing-features li .check,
+      .pc-cba-line-val .check {
         display: inline-block;
         width: 8px;
         height: 14px;
@@ -568,10 +569,10 @@
         margin: 0 0 4px;
       }
       .pc-cba-col.pc-cba-inhouse .pc-cba-total {
-        color: #cc3333;
+        color: #555;
       }
       .pc-cba-col.pc-cba-pebble .pc-cba-total {
-        color: #1a8a3e;
+        color: #8228CF;
       }
       .pc-cba-period {
         font-size: 0.85em;
@@ -589,8 +590,8 @@
       .pc-cba-line-label { color: #555; }
       .pc-cba-line-val { font-weight: 600; color: #151515; }
       .pc-cba-savings {
-        background: #f0faf3;
-        border: 1px solid #c8ecd4;
+        background: #faf7fd;
+        border: 1px solid #e6d4f5;
         border-radius: 10px;
         padding: 24px 28px;
         text-align: center;
@@ -599,7 +600,7 @@
       .pc-cba-savings-big {
         font-size: 1.8em;
         font-weight: 700;
-        color: #1a8a3e;
+        color: #8228CF;
         margin: 0 0 4px;
       }
       .pc-cba-savings-sub {
@@ -842,95 +843,6 @@
                 </div>
               </div>
 
-              <!-- Cost-Benefit Analysis -->
-              <div class="pc-cba-section">
-                <h2 data-i18n="pricing-cba-h2">The Real Cost of Doing It In-House</h2>
-                <p class="pc-cba-lead" data-i18n="pricing-cba-lead">Hiring a full-time social media manager means salary, benefits, tools, and management overhead. With Pebble, you get a full team's output for a fraction of the cost and zero HR burden.</p>
-                <div class="pc-cba-compare">
-
-                  <!-- In-House Column -->
-                  <div class="pc-cba-col pc-cba-inhouse">
-                    <p class="pc-cba-col-title" data-i18n="pricing-cba-inhouse-title">In-House Hire</p>
-                    <p class="pc-cba-total">$6,200+</p>
-                    <p class="pc-cba-period" data-i18n="pricing-cba-period">CAD / month</p>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-salary">Base salary</span>
-                      <span class="pc-cba-line-val">$4,500</span>
-                    </div>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-benefits">Benefits &amp; payroll taxes</span>
-                      <span class="pc-cba-line-val">$900</span>
-                    </div>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-tools">Software &amp; tools</span>
-                      <span class="pc-cba-line-val">$300</span>
-                    </div>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-training">Training &amp; development</span>
-                      <span class="pc-cba-line-val">$200</span>
-                    </div>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-overhead">Management overhead</span>
-                      <span class="pc-cba-line-val">$300</span>
-                    </div>
-                  </div>
-
-                  <!-- VS divider -->
-                  <div class="pc-cba-vs">vs</div>
-
-                  <!-- Pebble Column -->
-                  <div class="pc-cba-col pc-cba-pebble">
-                    <p class="pc-cba-col-title" data-i18n="pricing-cba-pebble-title">Pebble Pro Plan</p>
-                    <p class="pc-cba-total">$250</p>
-                    <p class="pc-cba-period" data-i18n="pricing-cba-period-usd">USD / month</p>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-platforms">3 platforms managed</span>
-                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
-                    </div>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-daily">Daily publishing, 5 days/week</span>
-                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
-                    </div>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-strategy">Strategy &amp; content calendar</span>
-                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
-                    </div>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-analytics">Performance analytics</span>
-                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
-                    </div>
-                    <div class="pc-cba-line">
-                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-zero">No HR, no contracts, no overhead</span>
-                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
-                    </div>
-                    <div class="pc-cba-savings">
-                      <p class="pc-cba-savings-big" data-i18n="pricing-cba-savings-big">Save 95%+</p>
-                      <p class="pc-cba-savings-sub" data-i18n="pricing-cba-savings-sub">Compared to a full-time in-house hire, with the same daily output across more platforms.</p>
-                    </div>
-                  </div>
-
-                </div>
-
-                <!-- Bottom benefit cards -->
-                <div class="pc-cba-bottom-row">
-                  <div class="pc-cba-bottom-card">
-                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#9889;</div>
-                    <h4 data-i18n="pricing-cba-b1-h4">Punch Above Your Weight</h4>
-                    <p data-i18n="pricing-cba-b1-p">Small teams get the same daily publishing cadence and multi-platform presence as companies with dedicated marketing departments.</p>
-                  </div>
-                  <div class="pc-cba-bottom-card">
-                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#128200;</div>
-                    <h4 data-i18n="pricing-cba-b2-h4">Scale Without Hiring</h4>
-                    <p data-i18n="pricing-cba-b2-p">Ramp up your digital presence instantly. No recruiting, no onboarding, no training curves. Your strategist is ready on day one.</p>
-                  </div>
-                  <div class="pc-cba-bottom-card">
-                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#128176;</div>
-                    <h4 data-i18n="pricing-cba-b3-h4">Predictable Monthly Cost</h4>
-                    <p data-i18n="pricing-cba-b3-p">No surprise expenses, no benefits renewals, no severance risk. One flat monthly fee that you can cancel anytime.</p>
-                  </div>
-                </div>
-              </div>
-
               <!-- Pricing intro -->
               <div class="pc-pricing-intro">
                 <p data-i18n="pricing-intro">Every plan is powered by our proprietary AI analytics stack: predictive audience modelling, semantic content optimization, and real-time performance intelligence. Your dedicated strategist translates these insights into daily, platform-native content in your brand voice. Pick the scope that fits your growth objectives.</p>
@@ -1010,6 +922,95 @@
               <div class="pc-manage-banner">
                 <p data-i18n-html="pricing-manage-desc"><strong>Already a subscriber?</strong> View invoices, update your payment method, or cancel your plan from your account dashboard.</p>
                 <a href="https://billing.stripe.com/p/login/7sYfZa5EC0S782d8HCfnO00" id="manage-account-link" data-portal="true" data-i18n="pricing-manage-link">Manage Account</a>
+              </div>
+
+              <!-- Cost-Benefit Analysis -->
+              <div class="pc-cba-section">
+                <h2 data-i18n="pricing-cba-h2">The Real Cost of Doing It In-House</h2>
+                <p class="pc-cba-lead" data-i18n="pricing-cba-lead">Hiring a full-time social media manager means salary, benefits, tools, and management overhead. With Pebble, you get a full team's output for a fraction of the cost and zero HR burden.</p>
+                <div class="pc-cba-compare">
+
+                  <!-- In-House Column -->
+                  <div class="pc-cba-col pc-cba-inhouse">
+                    <p class="pc-cba-col-title" data-i18n="pricing-cba-inhouse-title">In-House Hire</p>
+                    <p class="pc-cba-total">$6,200+</p>
+                    <p class="pc-cba-period" data-i18n="pricing-cba-period">CAD / month</p>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-salary">Base salary</span>
+                      <span class="pc-cba-line-val">$4,500</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-benefits">Benefits &amp; payroll taxes</span>
+                      <span class="pc-cba-line-val">$900</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-tools">Software &amp; tools</span>
+                      <span class="pc-cba-line-val">$300</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-training">Training &amp; development</span>
+                      <span class="pc-cba-line-val">$200</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-overhead">Management overhead</span>
+                      <span class="pc-cba-line-val">$300</span>
+                    </div>
+                  </div>
+
+                  <!-- VS divider -->
+                  <div class="pc-cba-vs">vs</div>
+
+                  <!-- Pebble Column -->
+                  <div class="pc-cba-col pc-cba-pebble">
+                    <p class="pc-cba-col-title" data-i18n="pricing-cba-pebble-title">Pebble Pro Plan</p>
+                    <p class="pc-cba-total">$250</p>
+                    <p class="pc-cba-period" data-i18n="pricing-cba-period-usd">USD / month</p>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-platforms">3 platforms managed</span>
+                      <span class="pc-cba-line-val"><span class="check">&#10003;</span></span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-daily">Daily publishing, 5 days/week</span>
+                      <span class="pc-cba-line-val"><span class="check">&#10003;</span></span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-strategy">Strategy &amp; content calendar</span>
+                      <span class="pc-cba-line-val"><span class="check">&#10003;</span></span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-analytics">Performance analytics</span>
+                      <span class="pc-cba-line-val"><span class="check">&#10003;</span></span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-zero">No HR, no contracts, no overhead</span>
+                      <span class="pc-cba-line-val"><span class="check">&#10003;</span></span>
+                    </div>
+                    <div class="pc-cba-savings">
+                      <p class="pc-cba-savings-big" data-i18n="pricing-cba-savings-big">Save 95%+</p>
+                      <p class="pc-cba-savings-sub" data-i18n="pricing-cba-savings-sub">Compared to a full-time in-house hire, with the same daily output across more platforms.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Bottom benefit cards -->
+                <div class="pc-cba-bottom-row">
+                  <div class="pc-cba-bottom-card">
+                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#9889;</div>
+                    <h4 data-i18n="pricing-cba-b1-h4">Punch Above Your Weight</h4>
+                    <p data-i18n="pricing-cba-b1-p">Small teams get the same daily publishing cadence and multi-platform presence as companies with dedicated marketing departments.</p>
+                  </div>
+                  <div class="pc-cba-bottom-card">
+                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#128200;</div>
+                    <h4 data-i18n="pricing-cba-b2-h4">Scale Without Hiring</h4>
+                    <p data-i18n="pricing-cba-b2-p">Ramp up your digital presence instantly. No recruiting, no onboarding, no training curves. Your strategist is ready on day one.</p>
+                  </div>
+                  <div class="pc-cba-bottom-card">
+                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#128176;</div>
+                    <h4 data-i18n="pricing-cba-b3-h4">Predictable Monthly Cost</h4>
+                    <p data-i18n="pricing-cba-b3-p">No surprise expenses, no benefits renewals, no severance risk. One flat monthly fee that you can cancel anytime.</p>
+                  </div>
+                </div>
               </div>
 
               <!-- FAQ -->
