@@ -634,6 +634,25 @@
         line-height: 1.6;
         margin: 0;
       }
+      .pc-cba-cta-wrap {
+        text-align: center;
+        margin: 48px 0 0;
+      }
+      .pc-cba-cta {
+        display: inline-block;
+        background: #8228CF;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 14px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.25s ease, transform 0.15s ease;
+      }
+      .pc-cba-cta:hover {
+        background: #6b1fad;
+        transform: translateY(-1px);
+      }
       @media (max-width: 860px) {
         .pc-cba-compare {
           grid-template-columns: 1fr;
@@ -845,7 +864,7 @@
               </div>
 
               <!-- Pricing cards -->
-              <div class="pc-pricing-grid">
+              <div class="pc-pricing-grid" id="pricing-plans">
 
                 <!-- BASIC -->
                 <div class="pc-pricing-card">
@@ -1004,6 +1023,10 @@
                     <p data-i18n="pricing-cba-b3-p">No surprise expenses, no benefits renewals, no severance risk. One flat monthly fee that you can cancel anytime.</p>
                   </div>
                 </div>
+              </div>
+
+              <div class="pc-cba-cta-wrap">
+                <a href="#pricing-plans" class="pc-cba-cta" data-i18n="pricing-cba-cta">Select a Plan</a>
               </div>
 
               <!-- FAQ -->
