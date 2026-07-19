@@ -568,47 +568,49 @@ footer {
 .pc-frameworks-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin: 20px 0;
+  gap: 16px;
+  margin: 24px 0;
 }
 .pc-framework-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 16px;
-  border: 1px solid #f0f0f0;
-  border-radius: 6px;
+  gap: 16px;
+  padding: 22px 20px;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
   background: #fafafa;
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.2s;
+  transition: border-color 0.25s, box-shadow 0.25s;
 }
 .pc-framework-item:hover {
   border-color: #8228cf;
+  box-shadow: 0 4px 16px rgba(130,40,207,0.08);
   text-decoration: none;
   color: inherit;
 }
 .pc-fw-icon {
-  width: 32px;
-  height: 32px;
-  min-width: 32px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   background: #f3e0ff;
-  border-radius: 4px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.pc-fw-icon svg { width: 16px; height: 16px; fill: #8228cf; }
+.pc-fw-icon svg { width: 20px; height: 20px; fill: #8228cf; }
 .pc-fw-text strong {
   display: block;
-  font-size: 12px;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #111;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 .pc-fw-text span {
-  font-size: 11px;
-  color: #888;
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.5;
 }
 @media (max-width: 768px) {
   .pc-frameworks-list { grid-template-columns: 1fr; }
