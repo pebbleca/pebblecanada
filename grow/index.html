@@ -500,6 +500,159 @@
         font-size: 0.85em;
         line-height: 1.6;
       }
+
+      /* ── Cost-Benefit Analysis ── */
+      .pc-cba-section {
+        max-width: 1060px;
+        margin: 0 auto 56px;
+      }
+      .pc-cba-section h2 {
+        font-size: 1.6em;
+        font-weight: 700;
+        color: #151515;
+        margin: 0 0 8px;
+        text-align: center;
+      }
+      .pc-cba-lead {
+        max-width: 720px;
+        margin: 0 auto 36px;
+        color: #555;
+        font-size: 1.02em;
+        line-height: 1.75;
+        text-align: center;
+      }
+      .pc-cba-compare {
+        display: grid;
+        grid-template-columns: 1fr 80px 1fr;
+        gap: 0;
+        align-items: stretch;
+        margin: 0 0 36px;
+      }
+      .pc-cba-col {
+        border: 1px solid #e8e8e8;
+        border-radius: 14px;
+        padding: 32px 28px;
+        background: #fff;
+      }
+      .pc-cba-col.pc-cba-inhouse {
+        background: #fafafa;
+      }
+      .pc-cba-col.pc-cba-pebble {
+        border: 2px solid #8228CF;
+        box-shadow: 0 6px 24px rgba(130,40,207,0.1);
+      }
+      .pc-cba-vs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1em;
+        font-weight: 700;
+        color: #bbb;
+      }
+      .pc-cba-col-title {
+        font-size: 0.78em;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #999;
+        margin: 0 0 16px;
+      }
+      .pc-cba-col.pc-cba-pebble .pc-cba-col-title {
+        color: #8228CF;
+      }
+      .pc-cba-total {
+        font-size: 2.2em;
+        font-weight: 700;
+        color: #151515;
+        line-height: 1.1;
+        margin: 0 0 4px;
+      }
+      .pc-cba-col.pc-cba-inhouse .pc-cba-total {
+        color: #cc3333;
+      }
+      .pc-cba-col.pc-cba-pebble .pc-cba-total {
+        color: #1a8a3e;
+      }
+      .pc-cba-period {
+        font-size: 0.85em;
+        color: #aaa;
+        margin: 0 0 20px;
+      }
+      .pc-cba-line {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 0.92em;
+      }
+      .pc-cba-line:last-child { border-bottom: none; }
+      .pc-cba-line-label { color: #555; }
+      .pc-cba-line-val { font-weight: 600; color: #151515; }
+      .pc-cba-savings {
+        background: #f0faf3;
+        border: 1px solid #c8ecd4;
+        border-radius: 10px;
+        padding: 24px 28px;
+        text-align: center;
+        margin-top: 8px;
+      }
+      .pc-cba-savings-big {
+        font-size: 1.8em;
+        font-weight: 700;
+        color: #1a8a3e;
+        margin: 0 0 4px;
+      }
+      .pc-cba-savings-sub {
+        font-size: 0.92em;
+        color: #555;
+        margin: 0;
+        line-height: 1.55;
+      }
+      .pc-cba-bottom-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 32px;
+      }
+      .pc-cba-bottom-card {
+        background: #fff;
+        border: 1px solid #e8e8e8;
+        border-radius: 14px;
+        padding: 28px 24px;
+        text-align: center;
+      }
+      .pc-cba-bottom-icon {
+        font-size: 1.8em;
+        margin-bottom: 12px;
+      }
+      .pc-cba-bottom-card h4 {
+        font-size: 1em;
+        font-weight: 700;
+        color: #151515;
+        margin: 0 0 8px;
+      }
+      .pc-cba-bottom-card p {
+        font-size: 0.88em;
+        color: #555;
+        line-height: 1.6;
+        margin: 0;
+      }
+      @media (max-width: 860px) {
+        .pc-cba-compare {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          max-width: 420px;
+          margin: 0 auto 36px;
+        }
+        .pc-cba-vs {
+          padding: 8px 0;
+        }
+        .pc-cba-bottom-row {
+          grid-template-columns: 1fr;
+          max-width: 420px;
+          margin: 32px auto 0;
+        }
+      }
     </style>
   </head>
   <body>
@@ -685,6 +838,95 @@
                   <div class="pc-method-card">
                     <h4 data-i18n="pricing-method-c4-h4">Neural Brand Voice Calibration</h4>
                     <p data-i18n="pricing-method-c4-p">Deep learning models trained on your existing communications extract your linguistic DNA, including tone, cadence, terminology, and sentiment profile, so every piece of content is authentically yours.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cost-Benefit Analysis -->
+              <div class="pc-cba-section">
+                <h2 data-i18n="pricing-cba-h2">The Real Cost of Doing It In-House</h2>
+                <p class="pc-cba-lead" data-i18n="pricing-cba-lead">Hiring a full-time social media manager means salary, benefits, tools, and management overhead. With Pebble, you get a full team's output for a fraction of the cost and zero HR burden.</p>
+                <div class="pc-cba-compare">
+
+                  <!-- In-House Column -->
+                  <div class="pc-cba-col pc-cba-inhouse">
+                    <p class="pc-cba-col-title" data-i18n="pricing-cba-inhouse-title">In-House Hire</p>
+                    <p class="pc-cba-total">$6,200+</p>
+                    <p class="pc-cba-period" data-i18n="pricing-cba-period">CAD / month</p>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-salary">Base salary</span>
+                      <span class="pc-cba-line-val">$4,500</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-benefits">Benefits &amp; payroll taxes</span>
+                      <span class="pc-cba-line-val">$900</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-tools">Software &amp; tools</span>
+                      <span class="pc-cba-line-val">$300</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-training">Training &amp; development</span>
+                      <span class="pc-cba-line-val">$200</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-ih-overhead">Management overhead</span>
+                      <span class="pc-cba-line-val">$300</span>
+                    </div>
+                  </div>
+
+                  <!-- VS divider -->
+                  <div class="pc-cba-vs">vs</div>
+
+                  <!-- Pebble Column -->
+                  <div class="pc-cba-col pc-cba-pebble">
+                    <p class="pc-cba-col-title" data-i18n="pricing-cba-pebble-title">Pebble Pro Plan</p>
+                    <p class="pc-cba-total">$250</p>
+                    <p class="pc-cba-period" data-i18n="pricing-cba-period-usd">USD / month</p>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-platforms">3 platforms managed</span>
+                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-daily">Daily publishing, 5 days/week</span>
+                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-strategy">Strategy &amp; content calendar</span>
+                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-analytics">Performance analytics</span>
+                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
+                    </div>
+                    <div class="pc-cba-line">
+                      <span class="pc-cba-line-label" data-i18n="pricing-cba-pb-zero">No HR, no contracts, no overhead</span>
+                      <span class="pc-cba-line-val" style="color:#1a8a3e;">&#10003;</span>
+                    </div>
+                    <div class="pc-cba-savings">
+                      <p class="pc-cba-savings-big" data-i18n="pricing-cba-savings-big">Save 95%+</p>
+                      <p class="pc-cba-savings-sub" data-i18n="pricing-cba-savings-sub">Compared to a full-time in-house hire, with the same daily output across more platforms.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Bottom benefit cards -->
+                <div class="pc-cba-bottom-row">
+                  <div class="pc-cba-bottom-card">
+                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#9889;</div>
+                    <h4 data-i18n="pricing-cba-b1-h4">Punch Above Your Weight</h4>
+                    <p data-i18n="pricing-cba-b1-p">Small teams get the same daily publishing cadence and multi-platform presence as companies with dedicated marketing departments.</p>
+                  </div>
+                  <div class="pc-cba-bottom-card">
+                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#128200;</div>
+                    <h4 data-i18n="pricing-cba-b2-h4">Scale Without Hiring</h4>
+                    <p data-i18n="pricing-cba-b2-p">Ramp up your digital presence instantly. No recruiting, no onboarding, no training curves. Your strategist is ready on day one.</p>
+                  </div>
+                  <div class="pc-cba-bottom-card">
+                    <div class="pc-cba-bottom-icon" aria-hidden="true">&#128176;</div>
+                    <h4 data-i18n="pricing-cba-b3-h4">Predictable Monthly Cost</h4>
+                    <p data-i18n="pricing-cba-b3-p">No surprise expenses, no benefits renewals, no severance risk. One flat monthly fee that you can cancel anytime.</p>
                   </div>
                 </div>
               </div>
