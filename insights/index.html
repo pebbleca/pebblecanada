@@ -124,7 +124,7 @@
           .pc-li-ticker-section {
             max-width: 100%;
             overflow: hidden;
-            padding: 0 0 8px;
+            padding: 0 0 24px;
             margin-bottom: 0;
           }
           .pc-li-ticker-header {
@@ -155,16 +155,13 @@
             display: flex;
             gap: 20px;
             width: max-content;
-            animation: liScroll 45s linear infinite;
             padding: 4px 0 12px;
+            cursor: grab;
+            user-select: none;
+            -webkit-user-select: none;
           }
-          .pc-li-ticker-track:hover {
-            animation-play-state: paused;
-          }
-
-          @keyframes liScroll {
-            0%   { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+          .pc-li-ticker-track:active {
+            cursor: grabbing;
           }
 
           .pc-li-card {
@@ -219,9 +216,12 @@
 
           @media (max-width: 600px) {
             .pc-li-card { width: 260px; padding: 16px 18px; }
-            .pc-li-ticker-track { animation-duration: 30s; }
           }
         </style>
+
+        <div style="max-width:1060px; margin:32px auto 0; padding:0 20px;">
+          <hr style="border:none; border-top:1px solid #e0e0e0; margin:0;">
+        </div>
 
         <div class="ms-section__block">
           <div class="center-block">

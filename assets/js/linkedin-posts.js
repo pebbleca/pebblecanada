@@ -50,7 +50,7 @@ var PEBBLE_LI_POSTS = [
   }
 ];
 
-/* ─── Ticker Renderer ──────────────────────────────────────────────────── */
+/* ─── Ticker Renderer (auto-scroll + drag) ─────────────────────────────── */
 (function () {
   'use strict';
 
@@ -76,19 +76,185 @@ var PEBBLE_LI_POSTS = [
     var posts = PEBBLE_LI_POSTS;
     if (!posts.length) return;
 
-    // Build cards twice for seamless infinite loop
+    // Build cards 3x for seamless looping in both directions
     var fragment = document.createDocumentFragment();
-    for (var round = 0; round < 2; round++) {
+    for (var round = 0; round < 3; round++) {
       for (var i = 0; i < posts.length; i++) {
         fragment.appendChild(buildCard(posts[i]));
       }
     }
     track.appendChild(fragment);
 
-    // Adjust animation speed based on number of posts
-    var totalWidth = posts.length * (320 + 20); // card width + gap
-    var speed = Math.max(30, totalWidth / 8); // ~8px/s
-    track.style.animationDuration = speed + 's';
+    // ── Measurements ──
+    var cardWidth = 320 + 20; // card width + gap
+    var setWidth = posts.length * cardWidth; // width of one full set
+    var scrollSpeed = 0.6; // pixels per frame (~36px/s at 60fps)
+
+    // Remove CSS animation — we drive it with JS now
+    track.style.animation = 'none';
+    track.style.transform = 'translateX(0px)';
+
+    // Start in the middle set so we can drag backwards
+    var pos = -setWidth;
+    track.style.transform = 'translateX(' + pos + 'px)';
+
+    // ── Auto-scroll state ──
+    var rafId = null;
+    var autoScrolling = true;
+
+    function autoScroll() {
+      if (!autoScrolling) return;
+      pos -= scrollSpeed;
+      // Seamless loop: if we've scrolled past two full sets, jump back one set
+      if (pos <= -setWidth * 2) {
+        pos += setWidth;
+      }
+      // If dragged right past the start, jump forward one set
+      if (pos >= 0) {
+        pos -= setWidth;
+      }
+      track.style.transform = 'translateX(' + pos + 'px)';
+      rafId = requestAnimationFrame(autoScroll);
+    }
+
+    rafId = requestAnimationFrame(autoScroll);
+
+    // ── Drag state ──
+    var isDragging = false;
+    var didDrag = false;
+    var startX = 0;
+    var startPos = 0;
+    var velocity = 0;
+    var lastX = 0;
+    var lastTime = 0;
+    var momentumId = null;
+
+    function wrapPos() {
+      if (pos <= -setWidth * 2) pos += setWidth;
+      if (pos >= 0) pos -= setWidth;
+    }
+
+    function onDragStart(clientX) {
+      isDragging = true;
+      didDrag = false;
+      autoScrolling = false;
+      if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+      if (momentumId) { cancelAnimationFrame(momentumId); momentumId = null; }
+      startX = clientX;
+      startPos = pos;
+      lastX = clientX;
+      lastTime = Date.now();
+      velocity = 0;
+      track.style.cursor = 'grabbing';
+    }
+
+    function onDragMove(clientX) {
+      if (!isDragging) return;
+      var dx = clientX - startX;
+      if (Math.abs(dx) > 5) didDrag = true;
+      pos = startPos + dx;
+      wrapPos();
+      // Track velocity for momentum
+      var now = Date.now();
+      var dt = now - lastTime;
+      if (dt > 0) {
+        velocity = (clientX - lastX) / dt; // px per ms
+      }
+      lastX = clientX;
+      lastTime = now;
+      track.style.transform = 'translateX(' + pos + 'px)';
+    }
+
+    function onDragEnd() {
+      if (!isDragging) return;
+      isDragging = false;
+      track.style.cursor = 'grab';
+
+      // Apply momentum
+      var friction = 0.95;
+      var momentumVel = velocity * 16; // convert to px per frame
+
+      function momentumStep() {
+        if (Math.abs(momentumVel) < 0.3) {
+          // Momentum done — resume auto-scroll
+          autoScrolling = true;
+          rafId = requestAnimationFrame(autoScroll);
+          return;
+        }
+        pos += momentumVel;
+        momentumVel *= friction;
+        wrapPos();
+        track.style.transform = 'translateX(' + pos + 'px)';
+        momentumId = requestAnimationFrame(momentumStep);
+      }
+
+      if (Math.abs(velocity) > 0.1) {
+        momentumId = requestAnimationFrame(momentumStep);
+      } else {
+        // No momentum — resume auto-scroll after short pause
+        setTimeout(function () {
+          autoScrolling = true;
+          rafId = requestAnimationFrame(autoScroll);
+        }, 2000);
+      }
+    }
+
+    // ── Mouse events ──
+    track.addEventListener('mousedown', function (e) {
+      e.preventDefault();
+      onDragStart(e.clientX);
+    });
+
+    window.addEventListener('mousemove', function (e) {
+      if (isDragging) {
+        e.preventDefault();
+        onDragMove(e.clientX);
+      }
+    });
+
+    window.addEventListener('mouseup', function () {
+      onDragEnd();
+    });
+
+    // Prevent link clicks after a drag
+    track.addEventListener('click', function (e) {
+      if (didDrag) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
+
+    // ── Touch events ──
+    track.addEventListener('touchstart', function (e) {
+      onDragStart(e.touches[0].clientX);
+    }, { passive: true });
+
+    track.addEventListener('touchmove', function (e) {
+      if (isDragging) {
+        onDragMove(e.touches[0].clientX);
+      }
+    }, { passive: true });
+
+    track.addEventListener('touchend', function () {
+      onDragEnd();
+    });
+
+    // ── Pause auto-scroll on hover (without drag) ──
+    var section = track.closest('.pc-li-ticker-section');
+    if (section) {
+      section.addEventListener('mouseenter', function () {
+        if (!isDragging && autoScrolling) {
+          autoScrolling = false;
+          if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+        }
+      });
+      section.addEventListener('mouseleave', function () {
+        if (!isDragging) {
+          autoScrolling = true;
+          rafId = requestAnimationFrame(autoScroll);
+        }
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
