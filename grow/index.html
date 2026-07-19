@@ -637,38 +637,39 @@
       }
       .pc-cba-cta-wrap {
         text-align: center;
-        margin: 32px 0 0;
+        margin: 32px 0 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 14px;
       }
-      .pc-cba-cta {
+      .pc-cba-cta,
+      .pc-cba-cta-outline {
         display: inline-block;
-        background: #8228CF;
-        color: #fff;
+        width: 280px;
+        text-align: center;
         font-size: 1rem;
         font-weight: 600;
-        padding: 14px 40px;
+        padding: 14px 0;
         border-radius: 8px;
         text-decoration: none;
-        transition: background 0.25s ease, transform 0.15s ease;
+        box-sizing: border-box;
+        transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
+      }
+      .pc-cba-cta {
+        background: #8228CF;
+        color: #fff;
+        border: 2px solid #8228CF;
       }
       .pc-cba-cta:hover {
         background: #6b1fad;
+        border-color: #6b1fad;
         transform: translateY(-1px);
       }
       .pc-cba-cta-outline {
-        display: inline-block;
         background: transparent;
         color: #8228CF;
-        font-size: 0.92rem;
-        font-weight: 600;
-        padding: 12px 36px;
-        border-radius: 8px;
         border: 2px solid #8228CF;
-        text-decoration: none;
-        transition: background 0.25s ease, color 0.25s ease, transform 0.15s ease;
       }
       .pc-cba-cta-outline:hover {
         background: #8228CF;
@@ -881,12 +882,12 @@
               </div>
 
               <!-- Pricing intro -->
-              <div class="pc-pricing-intro">
+              <div class="pc-pricing-intro" id="pricing-plans">
                 <p data-i18n="pricing-intro">Every plan is powered by our proprietary AI analytics stack: predictive audience modelling, semantic content optimization, and real-time performance intelligence. Your dedicated strategist translates these insights into daily, platform-native content in your brand voice. Pick the scope that fits your growth objectives.</p>
               </div>
 
               <!-- Pricing cards -->
-              <div class="pc-pricing-grid" id="pricing-plans">
+              <div class="pc-pricing-grid">
 
                 <!-- BASIC -->
                 <div class="pc-pricing-card">
