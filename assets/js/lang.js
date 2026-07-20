@@ -141,6 +141,10 @@
       'about-eval-li4':    'Information handling, access control, and responsible data use',
       'about-eval-li5':    'Quality assurance, performance tracking, and delivery transparency',
       'about-eval-p2':     'Pebble Canada exists to be a dependable execution partner in environments where outcomes matter, reputations are on the line, and delivery must stand up to scrutiny long after project completion.',
+      'about-careers-eyebrow': 'Join the Team',
+      'about-careers-h3':  'Careers at Pebble Canada',
+      'about-careers-p':   'We are always looking for talented professionals who want to do meaningful work with a growing company. Our team operates remotely across Canada, building the infrastructure that helps Canadian businesses compete globally.',
+      'about-careers-btn': 'View Open Positions',
 
       /* ── Technology ── */
       'tech-page-header':  'Technology, Automation &amp; AI',
@@ -1169,6 +1173,10 @@
       'about-eval-li4':    "Gestion de l\u2019information, contr\u00f4le d\u2019acc\u00e8s et utilisation responsable des donn\u00e9es",
       'about-eval-li5':    'Assurance qualit\u00e9, suivi des performances et transparence de la livraison',
       'about-eval-p2':     "Pebble Canada existe pour \u00eatre un partenaire d\u2019ex\u00e9cution fiable dans des environnements o\u00f9 les r\u00e9sultats comptent, les r\u00e9putations sont en jeu et la livraison doit r\u00e9sister \u00e0 l\u2019examen bien apr\u00e8s l\u2019ach\u00e8vement du projet.",
+      'about-careers-eyebrow': "Rejoignez l\u2019\u00e9quipe",
+      'about-careers-h3':  "Carri\u00e8res chez Pebble Canada",
+      'about-careers-p':   "Nous sommes toujours \u00e0 la recherche de professionnels talentueux qui souhaitent accomplir un travail significatif au sein d\u2019une entreprise en croissance. Notre \u00e9quipe travaille enti\u00e8rement \u00e0 distance \u00e0 travers le Canada, construisant l\u2019infrastructure qui aide les entreprises canadiennes \u00e0 rivaliser \u00e0 l\u2019\u00e9chelle mondiale.",
+      'about-careers-btn': 'Voir les postes ouverts',
 
       /* ── Technology ── */
       'tech-page-header':  'Technologie, Automatisation et IA',
