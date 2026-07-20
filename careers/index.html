@@ -64,6 +64,7 @@
     }
     </script>
     <style>
+      html { scroll-behavior: smooth; }
       .pc-careers-hero {
         text-align: center;
         max-width: 720px;
@@ -182,42 +183,127 @@
         border-color: #6b1fad;
         transform: translateY(-1px);
       }
-      .pc-careers-bottom {
-        text-align: center;
-        max-width: 600px;
-        margin: 0 auto 40px;
-        padding: 40px 32px;
-        background: #faf7fd;
-        border: 1px solid #e6d4f5;
-        border-radius: 12px;
+      .pc-careers-form-section {
+        max-width: 640px;
+        margin: 0 auto 56px;
+        scroll-margin-top: 100px;
       }
-      .pc-careers-bottom h3 {
-        font-size: 1.15rem;
+      .pc-careers-form-section h2 {
+        font-size: 1.5rem;
         font-weight: 700;
         color: #151515;
-        margin: 0 0 10px;
+        margin: 0 0 8px;
+        text-align: center;
       }
-      .pc-careers-bottom p {
-        font-size: 0.92rem;
+      .pc-careers-form-section > p {
+        font-size: 0.95rem;
         color: #555;
         line-height: 1.65;
-        margin: 0 0 20px;
+        margin: 0 0 32px;
+        text-align: center;
       }
-      .pc-careers-bottom a {
-        display: inline-block;
-        background: transparent;
-        color: #8228CF;
-        font-size: 0.92rem;
+      .pc-app-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .pc-app-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      @media (max-width: 560px) {
+        .pc-app-row { grid-template-columns: 1fr; }
+      }
+      .pc-app-field {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .pc-app-field label {
+        font-size: 0.85rem;
         font-weight: 600;
-        padding: 12px 36px;
-        border-radius: 8px;
-        border: 2px solid #8228CF;
-        text-decoration: none;
-        transition: background 0.25s ease, color 0.25s ease;
+        color: #333;
       }
-      .pc-careers-bottom a:hover {
+      .pc-app-field input,
+      .pc-app-field select,
+      .pc-app-field textarea {
+        font-family: inherit;
+        font-size: 0.95rem;
+        padding: 12px 14px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        color: #151515;
+        transition: border-color 0.2s ease;
+        outline: none;
+      }
+      .pc-app-field input:focus,
+      .pc-app-field select:focus,
+      .pc-app-field textarea:focus {
+        border-color: #8228CF;
+      }
+      .pc-app-field textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+      .pc-app-submit {
+        display: inline-block;
+        width: 100%;
         background: #8228CF;
         color: #fff;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 14px 0;
+        border: 2px solid #8228CF;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.25s ease, transform 0.15s ease;
+      }
+      .pc-app-submit:hover {
+        background: #6b1fad;
+        border-color: #6b1fad;
+        transform: translateY(-1px);
+      }
+      .pc-app-group {
+        border: 1px solid #e8e8e8;
+        border-radius: 10px;
+        padding: 24px 24px 20px;
+      }
+      .pc-app-group-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #151515;
+        margin: 0 0 6px;
+      }
+      .pc-app-group-sub {
+        font-size: 0.82rem;
+        color: #888;
+        margin: 0 0 18px;
+      }
+      .pc-app-exp-block {
+        padding-bottom: 18px;
+        margin-bottom: 18px;
+        border-bottom: 1px solid #f0f0f0;
+      }
+      .pc-app-exp-block:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      .pc-app-exp-num {
+        font-size: 0.78rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #8228CF;
+        margin: 0 0 12px;
+      }
+      #careerFormStatus {
+        text-align: center;
+        font-size: 0.95em;
+        margin-top: 8px;
       }
     </style>
   </head>
@@ -326,7 +412,7 @@
                     <span class="pc-job-tag">PostgreSQL</span>
                     <span class="pc-job-tag">AWS</span>
                   </div>
-                  <a href="mailto:careers@pebblecanada.ca?subject=Application%20-%20Full-Stack%20Developer" class="pc-job-apply" data-i18n="careers-apply">Apply Now</a>
+                  <a href="#apply" class="pc-job-apply" data-position="Full-Stack Developer" data-i18n="careers-apply">Apply Now</a>
                 </div>
 
                 <!-- Job 2: AI/ML Engineer -->
@@ -344,7 +430,7 @@
                     <span class="pc-job-tag">NLP</span>
                     <span class="pc-job-tag">MLOps</span>
                   </div>
-                  <a href="mailto:careers@pebblecanada.ca?subject=Application%20-%20AI%20ML%20Engineer" class="pc-job-apply" data-i18n="careers-apply">Apply Now</a>
+                  <a href="#apply" class="pc-job-apply" data-position="AI / Machine Learning Engineer" data-i18n="careers-apply">Apply Now</a>
                 </div>
 
                 <!-- Job 3: Frontend Engineer -->
@@ -362,7 +448,7 @@
                     <span class="pc-job-tag">Tailwind CSS</span>
                     <span class="pc-job-tag">Figma</span>
                   </div>
-                  <a href="mailto:careers@pebblecanada.ca?subject=Application%20-%20Frontend%20Engineer" class="pc-job-apply" data-i18n="careers-apply">Apply Now</a>
+                  <a href="#apply" class="pc-job-apply" data-position="Frontend Engineer" data-i18n="careers-apply">Apply Now</a>
                 </div>
 
                 <!-- Job 4: Backend Engineer -->
@@ -380,16 +466,161 @@
                     <span class="pc-job-tag">Docker</span>
                     <span class="pc-job-tag">Kubernetes</span>
                   </div>
-                  <a href="mailto:careers@pebblecanada.ca?subject=Application%20-%20Backend%20Engineer" class="pc-job-apply" data-i18n="careers-apply">Apply Now</a>
+                  <a href="#apply" class="pc-job-apply" data-position="Backend Engineer" data-i18n="careers-apply">Apply Now</a>
                 </div>
 
               </div>
 
-              <!-- General application -->
-              <div class="pc-careers-bottom">
-                <h3 data-i18n="careers-general-h3">Don't See Your Role?</h3>
-                <p data-i18n="careers-general-p">We are always looking for talented people. Send us your resume and tell us how you'd contribute.</p>
-                <a href="mailto:careers@pebblecanada.ca?subject=General%20Application" data-i18n="careers-general-cta">Send Your Resume</a>
+              <!-- Application Form -->
+              <div class="pc-careers-form-section" id="apply">
+                <h2 data-i18n="careers-form-h2">Apply Now</h2>
+                <p data-i18n="careers-form-lead">Fill out the form below and we will be in touch. All fields marked with * are required.</p>
+
+                <form id="careerForm" action="https://formspree.io/f/meeeogzg" method="POST" class="pc-app-form" novalidate>
+                  <input type="hidden" name="_subject" value="New Career Application">
+
+                  <div class="pc-app-row">
+                    <div class="pc-app-field">
+                      <label for="app-name" data-i18n="careers-form-name">Full Name *</label>
+                      <input type="text" id="app-name" name="name" required autocomplete="name" data-i18n-placeholder="careers-form-name-ph" placeholder="Your full name">
+                    </div>
+                    <div class="pc-app-field">
+                      <label for="app-email" data-i18n="careers-form-email">Email Address *</label>
+                      <input type="email" id="app-email" name="email" required autocomplete="email" data-i18n-placeholder="careers-form-email-ph" placeholder="you@example.com">
+                    </div>
+                  </div>
+
+                  <div class="pc-app-row">
+                    <div class="pc-app-field">
+                      <label for="app-phone" data-i18n="careers-form-phone">Phone Number</label>
+                      <input type="tel" id="app-phone" name="phone" autocomplete="tel" data-i18n-placeholder="careers-form-phone-ph" placeholder="+1 (___) ___-____">
+                    </div>
+                    <div class="pc-app-field">
+                      <label for="app-position" data-i18n="careers-form-position">Position *</label>
+                      <select id="app-position" name="position" required>
+                        <option value="" data-i18n="careers-form-select">-- Select a position --</option>
+                        <option value="Full-Stack Developer">Full-Stack Developer</option>
+                        <option value="AI / Machine Learning Engineer">AI / Machine Learning Engineer</option>
+                        <option value="Frontend Engineer">Frontend Engineer</option>
+                        <option value="Backend Engineer">Backend Engineer</option>
+                        <option value="General Application" data-i18n="careers-form-general">General Application</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="pc-app-field">
+                    <label for="app-linkedin" data-i18n="careers-form-linkedin">LinkedIn Profile or Portfolio URL</label>
+                    <input type="url" id="app-linkedin" name="linkedin" data-i18n-placeholder="careers-form-linkedin-ph" placeholder="https://linkedin.com/in/yourprofile">
+                  </div>
+
+                  <!-- Work Experience -->
+                  <div class="pc-app-group">
+                    <p class="pc-app-group-title" data-i18n="careers-form-exp-title">Recent Work Experience</p>
+                    <p class="pc-app-group-sub" data-i18n="careers-form-exp-sub">List your 3 most recent positions (most recent first).</p>
+
+                    <div class="pc-app-exp-block">
+                      <p class="pc-app-exp-num" data-i18n="careers-form-exp1">Position 1 (Most Recent)</p>
+                      <div class="pc-app-row">
+                        <div class="pc-app-field">
+                          <label for="app-exp1-title" data-i18n="careers-form-exp-jobtitle">Job Title *</label>
+                          <input type="text" id="app-exp1-title" name="experience_1_title" required data-i18n-placeholder="careers-form-exp-jobtitle-ph" placeholder="e.g. Senior Developer">
+                        </div>
+                        <div class="pc-app-field">
+                          <label for="app-exp1-company" data-i18n="careers-form-exp-company">Company *</label>
+                          <input type="text" id="app-exp1-company" name="experience_1_company" required data-i18n-placeholder="careers-form-exp-company-ph" placeholder="e.g. Acme Corp">
+                        </div>
+                      </div>
+                      <div class="pc-app-row" style="margin-top:12px;">
+                        <div class="pc-app-field">
+                          <label for="app-exp1-dates" data-i18n="careers-form-exp-dates">Dates</label>
+                          <input type="text" id="app-exp1-dates" name="experience_1_dates" data-i18n-placeholder="careers-form-exp-dates-ph" placeholder="e.g. Jan 2022 – Present">
+                        </div>
+                        <div class="pc-app-field">
+                          <label for="app-exp1-summary" data-i18n="careers-form-exp-summary">Key Responsibilities</label>
+                          <input type="text" id="app-exp1-summary" name="experience_1_summary" data-i18n-placeholder="careers-form-exp-summary-ph" placeholder="Brief summary of your role">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="pc-app-exp-block">
+                      <p class="pc-app-exp-num" data-i18n="careers-form-exp2">Position 2</p>
+                      <div class="pc-app-row">
+                        <div class="pc-app-field">
+                          <label for="app-exp2-title" data-i18n="careers-form-exp-jobtitle">Job Title</label>
+                          <input type="text" id="app-exp2-title" name="experience_2_title" data-i18n-placeholder="careers-form-exp-jobtitle-ph" placeholder="e.g. Senior Developer">
+                        </div>
+                        <div class="pc-app-field">
+                          <label for="app-exp2-company" data-i18n="careers-form-exp-company">Company</label>
+                          <input type="text" id="app-exp2-company" name="experience_2_company" data-i18n-placeholder="careers-form-exp-company-ph" placeholder="e.g. Acme Corp">
+                        </div>
+                      </div>
+                      <div class="pc-app-row" style="margin-top:12px;">
+                        <div class="pc-app-field">
+                          <label for="app-exp2-dates" data-i18n="careers-form-exp-dates">Dates</label>
+                          <input type="text" id="app-exp2-dates" name="experience_2_dates" data-i18n-placeholder="careers-form-exp-dates-ph" placeholder="e.g. Jan 2022 – Present">
+                        </div>
+                        <div class="pc-app-field">
+                          <label for="app-exp2-summary" data-i18n="careers-form-exp-summary">Key Responsibilities</label>
+                          <input type="text" id="app-exp2-summary" name="experience_2_summary" data-i18n-placeholder="careers-form-exp-summary-ph" placeholder="Brief summary of your role">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="pc-app-exp-block">
+                      <p class="pc-app-exp-num" data-i18n="careers-form-exp3">Position 3</p>
+                      <div class="pc-app-row">
+                        <div class="pc-app-field">
+                          <label for="app-exp3-title" data-i18n="careers-form-exp-jobtitle">Job Title</label>
+                          <input type="text" id="app-exp3-title" name="experience_3_title" data-i18n-placeholder="careers-form-exp-jobtitle-ph" placeholder="e.g. Senior Developer">
+                        </div>
+                        <div class="pc-app-field">
+                          <label for="app-exp3-company" data-i18n="careers-form-exp-company">Company</label>
+                          <input type="text" id="app-exp3-company" name="experience_3_company" data-i18n-placeholder="careers-form-exp-company-ph" placeholder="e.g. Acme Corp">
+                        </div>
+                      </div>
+                      <div class="pc-app-row" style="margin-top:12px;">
+                        <div class="pc-app-field">
+                          <label for="app-exp3-dates" data-i18n="careers-form-exp-dates">Dates</label>
+                          <input type="text" id="app-exp3-dates" name="experience_3_dates" data-i18n-placeholder="careers-form-exp-dates-ph" placeholder="e.g. Jan 2022 – Present">
+                        </div>
+                        <div class="pc-app-field">
+                          <label for="app-exp3-summary" data-i18n="careers-form-exp-summary">Key Responsibilities</label>
+                          <input type="text" id="app-exp3-summary" name="experience_3_summary" data-i18n-placeholder="careers-form-exp-summary-ph" placeholder="Brief summary of your role">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Education -->
+                  <div class="pc-app-group">
+                    <p class="pc-app-group-title" data-i18n="careers-form-edu-title">Education</p>
+                    <div class="pc-app-row">
+                      <div class="pc-app-field">
+                        <label for="app-edu-degree" data-i18n="careers-form-edu-degree">Degree / Certification *</label>
+                        <input type="text" id="app-edu-degree" name="education_degree" required data-i18n-placeholder="careers-form-edu-degree-ph" placeholder="e.g. B.Sc. Computer Science">
+                      </div>
+                      <div class="pc-app-field">
+                        <label for="app-edu-school" data-i18n="careers-form-edu-school">Institution *</label>
+                        <input type="text" id="app-edu-school" name="education_institution" required data-i18n-placeholder="careers-form-edu-school-ph" placeholder="e.g. University of Toronto">
+                      </div>
+                    </div>
+                    <div class="pc-app-row" style="margin-top:12px;">
+                      <div class="pc-app-field">
+                        <label for="app-edu-year" data-i18n="careers-form-edu-year">Graduation Year</label>
+                        <input type="text" id="app-edu-year" name="education_year" data-i18n-placeholder="careers-form-edu-year-ph" placeholder="e.g. 2020">
+                      </div>
+                      <div class="pc-app-field"></div>
+                    </div>
+                  </div>
+
+                  <div class="pc-app-field">
+                    <label for="app-message" data-i18n="careers-form-message">Cover Message *</label>
+                    <textarea id="app-message" name="message" required data-i18n-placeholder="careers-form-message-ph" placeholder="Tell us about yourself and why you are interested in this role."></textarea>
+                  </div>
+
+                  <button type="submit" class="pc-app-submit" data-i18n="careers-form-submit">Submit Application</button>
+                </form>
+                <p id="careerFormStatus" style="display:none;" role="status" aria-live="polite"></p>
               </div>
 
               </div>
@@ -410,6 +641,51 @@
     <script type="text/javascript" src='../assets/js/plugins.min.js'></script>
     <script type="text/javascript" src="../assets/js/main.js"></script>
     <script type="text/javascript" src="../assets/js/lang.js"></script>
+    <script>
+      (function(){
+        // Pre-select position when Apply Now is clicked on a job card
+        document.querySelectorAll('.pc-job-apply[data-position]').forEach(function(btn){
+          btn.addEventListener('click', function(){
+            var pos = this.getAttribute('data-position');
+            var sel = document.getElementById('app-position');
+            if(sel && pos){
+              for(var i=0; i<sel.options.length; i++){
+                if(sel.options[i].value === pos){ sel.selectedIndex = i; break; }
+              }
+            }
+          });
+        });
+
+        // Form submission via Formspree
+        var form = document.getElementById('careerForm');
+        if(!form) return;
+        var statusEl = document.getElementById('careerFormStatus');
+
+        function showStatus(msg, ok){
+          if(!statusEl) return;
+          statusEl.style.display = 'block';
+          statusEl.textContent = msg;
+          statusEl.style.color = ok ? '#1b5e20' : '#8a1f11';
+        }
+
+        form.addEventListener('submit', async function(e){
+          e.preventDefault();
+          var action = form.getAttribute('action') || '';
+          try{
+            var formData = new FormData(form);
+            var res = await fetch(action, { method:'POST', body:formData, headers:{'Accept':'application/json'} });
+            if(res.ok){
+              form.reset();
+              showStatus('Application submitted successfully. We will be in touch!', true);
+            }else{
+              showStatus('Unable to submit right now. Please try again or email careers@pebblecanada.ca.', false);
+            }
+          }catch(err){
+            showStatus('Network error. Please try again or email careers@pebblecanada.ca.', false);
+          }
+        });
+      })();
+    </script>
     <script src="../assets/js/search-data.js"></script>
     <script src="../assets/js/search.js"></script>
   </body>
