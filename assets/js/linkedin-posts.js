@@ -19,28 +19,18 @@ var PEBBLE_LI_POSTS = [
     url: 'https://linkedin.com/company/pebblecanada'
   },
   {
-    date: 'Jul 9, 2026',
-    text: 'NORAD modernization is creating new opportunities for Canadian defence contractors — but operating above the 60th parallel comes with unique logistics and infrastructure challenges.',
-    url: 'https://linkedin.com/company/pebblecanada'
-  },
-  {
     date: 'Jul 5, 2026',
     text: 'Cross-border supply chain risk is forcing Canadian operators to diversify beyond the U.S. corridor. CPTPP and Indo-Pacific trade routes are gaining traction as viable alternatives.',
     url: 'https://linkedin.com/company/pebblecanada'
   },
   {
     date: 'Jul 1, 2026',
-    text: 'Happy Canada Day! Proud to be building capability across technology, defence, logistics, and workforce for Canadian organizations. Here\'s to another year of growth and impact.',
+    text: 'Happy Canada Day! Proud to be building capability across technology, logistics, and workforce for Canadian organizations. Here\'s to another year of growth and impact.',
     url: 'https://linkedin.com/company/pebblecanada'
   },
   {
     date: 'Jun 27, 2026',
-    text: 'Agentic AI is moving beyond chatbots into autonomous multi-step workflows. For government and defence, this raises critical questions about accountability, oversight, and human-in-the-loop design.',
-    url: 'https://linkedin.com/company/pebblecanada'
-  },
-  {
-    date: 'Jun 23, 2026',
-    text: 'Defence procurement in Canada doesn\'t have to be opaque. Our practical guide breaks down ITTs, RFPs, standing offers, and what suppliers need to know to compete effectively.',
+    text: 'Agentic AI is moving beyond chatbots into autonomous multi-step workflows. For government and regulated industries, this raises critical questions about accountability, oversight, and human-in-the-loop design.',
     url: 'https://linkedin.com/company/pebblecanada'
   },
   {

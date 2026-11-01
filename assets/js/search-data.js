@@ -6,13 +6,13 @@ var PEBBLE_SEARCH_INDEX = [
   {
     title: 'About Pebble Canada',
     url: '/about/',
-    description: 'A Canada-focused organization advancing capability across technology, logistics, defence, and workforce.',
+    description: 'A Canada-focused organization advancing capability across technology, logistics, and workforce.',
     sections: [
-      { heading: 'About Pebble Canada', body: 'Pebble Canada is a Canada founded, globally active solutions organization supporting complex programs across technology, logistics and supply chains, defence capability, and workforce delivery for energy and critical minerals. Established in 2025. Global footprint, hundreds of consultants, specialists, and delivery professionals spanning North America, Europe, Asia, and emerging markets.' },
-      { heading: 'Our Four Pillars', body: 'Technology Automation AI. Logistics Supply Chain. Defence Advanced Systems. Workforce Capability Solutions. Government organizations, prime contractors, infrastructure developers, energy operators, manufacturers, technology providers.' },
+      { heading: 'About Pebble Canada', body: 'Pebble Canada is a Canada founded, globally active solutions organization supporting complex programs across technology, logistics and supply chains, and workforce delivery for energy and critical minerals. Established in 2025. Global footprint, hundreds of consultants, specialists, and delivery professionals spanning North America, Europe, Asia, and emerging markets.' },
+      { heading: 'Our Core Pillars', body: 'Technology Automation AI. Logistics Supply Chain. Workforce Capability Solutions. Government organizations, prime contractors, infrastructure developers, energy operators, manufacturers, technology providers.' },
       { heading: 'How We Operate', body: 'Centralized governance with distributed execution. Delivery that stays within regulatory and contractual obligations. Security, privacy, and data discipline embedded by design. Clear reporting, audit readiness, and documentation standards. Long term partnerships built on performance and trust.' },
       { heading: 'What Clients and Partners Evaluate', body: 'Governance, accountability, and escalation frameworks. Supply chain integrity, vendor due diligence, and continuity planning. Workforce screening, safety practices, and role based deployment. Information handling, access control, and responsible data use. Quality assurance, performance tracking, and delivery transparency.' },
-      { heading: 'Company Timeline', body: 'Founded 2025. Incorporated in Canada. Government vendor registration PSPC SAP Ariba CanadaBuys. Technology pillar launch Pebble AI. Workforce offshore delivery partnerships North Africa Middle East South Asia 13000 vetted professionals. Defence procurement logistics corridors Europe Indo-Pacific. 2026 expansion critical minerals AI transformation.' },
+      { heading: 'Company Timeline', body: 'Founded 2025. Incorporated in Canada. Government vendor registration PSPC SAP Ariba CanadaBuys. Technology pillar launch Pebble AI. Workforce offshore delivery partnerships North Africa Middle East South Asia 13000 vetted professionals. Logistics corridors Europe Indo-Pacific. 2026 expansion critical minerals AI transformation.' },
       { heading: 'Registered and Recognized', body: 'CanadaBuys SAP Ariba registered vendor. CRA business number. Controlled Goods Program. Privacy Act compliance. Canada Labour Standards. DND delivery framework aligned.' },
       { heading: 'Global Delivery Footprint', body: 'North America Canada federal provincial private sector. Europe westbound logistics CETA. Asia Indo-Pacific eastbound logistics South Asia workforce. Middle East North Africa offshore workforce recruitment pipelines energy construction.' }
     ]
@@ -48,19 +48,6 @@ var PEBBLE_SEARCH_INDEX = [
     ]
   },
   {
-    title: 'Defence & Advanced Systems',
-    url: '/defence/',
-    description: 'From essential procurement to advanced drone enabled capability.',
-    sections: [
-      { heading: 'Core Procurement to Advanced Capability', body: 'Uniforms and field gear. Operational support and sustainment. Advanced systems integration. Drone and unmanned capability. Invitation to Tender, Request for Proposal, Request for Quotation. Tendering practices and solicitation formats. Mandatory requirements, evaluation criteria, and delivery schedules.' },
-      { heading: 'Procurement Readiness', body: 'SAP Ariba. Solicitation response support. Compliance matrices, requirement traceability, submission checklists. Standing offers and supply arrangements. Call ups. Scalable supply fulfilment. Supply chain integrity. Vendor coordination, inspection readiness, traceable documentation. Subcontracting, teaming, and prime contractor execution models.' },
-      { heading: 'Capability Coverage', body: 'Uniforms, apparel, field gear, operational equipment, logistics enabling items, and advanced systems. Unmanned and autonomous solutions. Surveillance, training, logistics support, and operational enablement. Reliability, interoperability, and compliant delivery.' },
-      { heading: 'Delivery Principles', body: 'Procurement-compliant delivery and bid readiness meeting Government of Canada standards. Clear compliance documentation and evaluation criteria. System interoperability and operational integration. Lifecycle sustainment planning and technology upgrade pathways. Secure operations and supply chain integrity. Quality assurance and acceptance readiness.' },
-      { heading: 'Defence Stats Canada', body: 'Canada defence budget 36.9 billion 2024-25. NATO 2 percent GDP target 2032. PSPC 7.3 billion annual defence contracts.' },
-      { heading: 'Defence Frameworks', body: 'CanadaBuys Buyandsell SAP Ariba PSPC. Strong Secure Engaged DND defence policy. PSPC defence procurement framework. Defence Industrial Base ITB policy. Government Contracting Policy TBS. Controlled Goods Program DND.' }
-    ]
-  },
-  {
     title: 'Logistics & Supply Chain',
     url: '/logistics/',
     description: 'International trade focused supply chain resilience and coordination.',
@@ -77,18 +64,17 @@ var PEBBLE_SEARCH_INDEX = [
     url: '/contact/',
     description: 'Reach out to explore partnerships across our four pillars.',
     sections: [
-      { heading: "Let's Work Together", body: 'Get in touch. Partnerships across technology, logistics, defence, and workforce. Office, telephone, email.' }
+      { heading: "Let's Work Together", body: 'Get in touch. Partnerships across technology, logistics, and workforce. Office, telephone, email.' }
     ]
   },
   {
     title: 'Insights & Perspectives',
     url: '/insights/',
-    description: 'Thought leadership and analysis on AI adoption, critical minerals workforce, defence procurement, and supply chain resilience.',
+    description: 'Thought leadership and analysis on AI adoption, critical minerals workforce, and supply chain resilience.',
     sections: [
       { heading: 'AI Strategy Insights', body: 'Canada AI adoption imperative productivity gap. Enterprise adoption research. Regulated sector organizations.' },
       { heading: 'Workforce Insights', body: 'Critical minerals workforce gap. Offshore workforce model Canadian energy projects. Labour shortage mining energy.' },
-      { heading: 'Defence Insights', body: 'Navigating Government of Canada defence procurement. ITT RFP RFQ. PSPC CanadaBuys SAP Ariba.' },
-      { heading: 'Supply Chain Insights', body: 'Building resilient supply chains Indo-Pacific era. Trade diversification logistics operational analytics.' }
+            { heading: 'Supply Chain Insights', body: 'Building resilient supply chains Indo-Pacific era. Trade diversification logistics operational analytics.' }
     ]
   },
   {
@@ -97,7 +83,7 @@ var PEBBLE_SEARCH_INDEX = [
     description: 'Canada leads in AI research but lags in enterprise adoption. An analysis of the productivity gap and what organizations should prioritize.',
     sections: [
       { heading: 'The Adoption Gap', body: 'Only 14 percent Canadian SMEs adopted AI 2023. Pan-Canadian AI Strategy 2.4 billion investment ISED. OECD enterprise AI deployment gap. Structural barriers regulatory caution fragmented data infrastructure procurement risk aversion.' },
-      { heading: 'Regulated Sectors', body: 'Federal government agencies TBS ATIP constraints. Healthcare financial services data regimes. Defence security cleared infrastructure. Guide to generative AI Government of Canada. Algorithmic Impact Assessment.' },
+      { heading: 'Regulated Sectors', body: 'Federal government agencies TBS ATIP constraints. Healthcare financial services data regimes. Guide to generative AI Government of Canada. Algorithmic Impact Assessment.' },
       { heading: 'Productive AI Adoption', body: 'Pilot to operational document processing decision support anomaly detection. Data infrastructure architecture. Governance accountability oversight rollback. Canada Digital Ambition.' },
       { heading: 'Sovereign Compute', body: 'Domestic compute capacity Canada. Sensitive workloads AI inference. ISED AI strategy sovereign.' }
     ]
@@ -107,22 +93,10 @@ var PEBBLE_SEARCH_INDEX = [
     url: '/insights/critical-minerals-workforce/',
     description: 'Analysis of the critical minerals labour shortage in Canada and what energy and resource operators need to plan for.',
     sections: [
-      { heading: 'Scale of the Opportunity', body: 'Canada 31 of 34 critical minerals US EU lists NRCan. 173 billion projected value 2030. Critical Minerals Strategy 31 priority minerals. EV batteries clean energy defence supply chains.' },
+      { heading: 'Scale of the Opportunity', body: 'Canada 31 of 34 critical minerals US EU lists NRCan. 173 billion projected value 2030. Critical Minerals Strategy 31 priority minerals. EV batteries and clean energy supply chains.' },
       { heading: 'The Labour Shortfall', body: '117000 direct jobs mining sector MAC. Remote northern site requirements fly-in fly-out. ESDC labour market data skilled trades deficits. Competition oil sands construction infrastructure.' },
       { heading: 'Jurisdictional Complexity', body: 'Provincial labour codes BC Ontario Quebec Alberta Saskatchewan. Northern remote site safety certifications rotational. Federal TFW Temporary Foreign Worker program IRCC. Reconciliation UNDRIP Indigenous territories.' },
       { heading: 'Offshore Workforce as Bridge', body: 'International pipelines energy construction mining trades. Pre-vetted certified deployment-ready candidates. 13000 vetted professionals. Compliance immigration specialist partners.' }
-    ]
-  },
-  {
-    title: "Navigating Canada's Defence Procurement — Insights",
-    url: '/insights/defence-procurement-canada/',
-    description: 'A practical guide to Government of Canada defence procurement — from ITTs and RFPs to standing offers, supply arrangements, and PSPC compliance.',
-    sections: [
-      { heading: 'The Procurement Landscape', body: 'Canada defence budget 36.9 billion 2024-25. PSPC manages defence procurement on behalf of DND. CanadaBuys SAP Ariba primary portal. ITT RFP RFQ solicitation types. Standing Offers Supply Arrangements recurring requirements.' },
-      { heading: 'Solicitation Structure', body: 'Mandatory rated criteria. Compliance documentation certifications insurance security clearances. Technical management evaluation criteria scored. Controlled Goods Program applicable products.' },
-      { heading: 'Security and Clearance', body: 'Facility Security Clearance FSC classified work. Personnel Security Clearances Reliability Secret Top Secret. Industrial Security Program PSPC. International suppliers subcontractors.' },
-      { heading: 'Compliance Documentation', body: 'Submission checklists compliance matrices requirement traceability. Delivery schedules quality plans inspection readiness. Subcontracting teaming arrangements. Industrial Technological Benefits ITB policy major projects.' },
-      { heading: 'Standing Offers Supply Arrangements', body: 'Preferred vehicle recurring requirements uniforms field gear sustainment items. Call-up process delivery obligations. Performance tracking compliance.' }
     ]
   },
   {
@@ -152,24 +126,22 @@ var PEBBLE_SEARCH_INDEX = [
   {
     title: 'Full Capability Matrix',
     url: '/capabilities/',
-    description: 'Complete overview of all Pebble Canada service capabilities across technology, workforce, defence, and logistics.',
+    description: 'Complete overview of all Pebble Canada service capabilities across technology, workforce, and logistics.',
     sections: [
       { heading: 'Technology AI Capabilities', body: 'AI Transformation. Enterprise Data Platform. Data Engineering Warehousing. Reporting Dashboards. AI Governance Compliance. Microsoft Stack Delivery.' },
       { heading: 'Workforce Capabilities', body: 'Skilled Labour Deployment. Workforce Planning Alignment. Safety Compliance Management. Critical Minerals Workforce. Offshore Subcontract Workforce. Recruitment Vetting.' },
-      { heading: 'Defence Capabilities', body: 'Uniforms Field Gear Procurement. Operational Support Sustainment. Advanced Systems Integration. Drone Unmanned Capability. Bid Preparation Compliance. Standing Offers Supply Arrangements.' },
       { heading: 'Logistics Capabilities', body: 'Trade Corridor Planning. Supplier Coordination. Continuity Resilience Planning. Visibility Control Tower Reporting. Trade Documentation Readiness. Supplier Diversification.' },
-      { heading: 'Sector Coverage', body: 'Federal Government. Energy Utilities. Critical Minerals Mining. Defence National Security. Infrastructure Construction. Technology Digital.' }
+      { heading: 'Sector Coverage', body: 'Federal Government. Energy Utilities. Critical Minerals Mining. Infrastructure Construction. Technology Digital.' }
     ]
   },
   {
     title: 'Sectors We Serve',
     url: '/sectors/',
-    description: 'Pebble Canada delivers across federal government, energy, critical minerals, defence, infrastructure, and technology sectors.',
+    description: 'Pebble Canada delivers across federal government, energy, critical minerals, infrastructure, and technology sectors.',
     sections: [
-      { heading: 'Federal Government', body: 'Government of Canada departments agencies. PSPC TBS DND compliance frameworks. Technology AI data platforms. Defence procurement. Logistics. ATIP audit-ready.' },
+      { heading: 'Federal Government', body: 'Government of Canada departments agencies. PSPC TBS compliance frameworks. Technology AI data platforms. Logistics. ATIP audit-ready.' },
       { heading: 'Energy and Utilities', body: 'Oil gas power generation LNG renewable energy. Workforce solutions operational technology supply chain. Safety regulatory standards. HSE compliance critical infrastructure.' },
       { heading: 'Critical Minerals and Mining', body: 'Lithium cobalt nickel rare earths. Workforce mobilization logistics operational technology. Full value chain extraction processing logistics. Remote fly-in fly-out operations.' },
-      { heading: 'Defence and National Security', body: 'DND PSPC procurement sustainment systems integration. Compliance security lifecycle delivery. NATO standards controlled goods solicitation-ready.' },
       { heading: 'Infrastructure and Construction', body: 'Roads ports utilities industrial facilities. Workforce deployment supply chain technology enablement. Domestic internationally-funded major projects remote sites.' },
       { heading: 'Technology and Digital', body: 'AI implementation data engineering operational governance. Regulated environments SaaS enterprise AI cloud. Microsoft Stack data platforms rapid product service evolution.' }
     ]
@@ -179,7 +151,7 @@ var PEBBLE_SEARCH_INDEX = [
     url: '/newsroom/',
     description: 'Latest news, milestones, and announcements from Pebble Canada.',
     sections: [
-      { heading: 'Recent News', body: 'Indo-Pacific logistics corridors expansion March 2026. Critical minerals workforce delivery program February 2026. AI adoption gap analysis published. CanadaBuys SAP Ariba vendor registration January 2026. Defence procurement readiness DND framework. Pebble AI technology practice launch. Made by Canadians marketplace. Pebble Canada incorporated 2025.' }
+      { heading: 'Recent News', body: 'Indo-Pacific logistics corridors expansion March 2026. Critical minerals workforce delivery program February 2026. AI adoption gap analysis published. CanadaBuys SAP Ariba vendor registration January 2026. Pebble AI technology practice launch. Made by Canadians marketplace. Pebble Canada incorporated 2025.' }
     ]
   }
 ];
