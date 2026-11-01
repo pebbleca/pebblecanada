@@ -111,7 +111,9 @@
         .ak-hero-inner { padding: 36px 26px; }
         .ak-hero h2 { font-size: 2rem; }
       }
-          .ak-logo{border-radius:22.5%;display:block;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+          .ak-logo{border-radius:22.5%;display:block;box-shadow:0 8px 24px rgba(0,0,0,.25);max-width:none!important;flex:0 0 auto;object-fit:contain;aspect-ratio:1/1}
+      .ak-brand .ak-logo{width:72px!important;height:72px!important}
+      .ak-cta .ak-logo{width:88px!important;height:88px!important}
     </style>
   </head>
   <body>
@@ -196,7 +198,7 @@
             <!-- Hero -->
             <section class="ak-hero" aria-labelledby="ak-hero-h">
               <div class="ak-hero-inner">
-                <div class="ak-brand"><img class="ak-logo" src="../assets/images/aklick/aklick-logo.png" alt="aKlick" width="72" height="72"></div>
+                <div class="ak-brand"><img class="ak-logo" src="../assets/images/aklick/aklick-logo.png" alt="aKlick" width="72" height="72" style="width:72px;height:72px;"></div>
                 <h2 id="ak-hero-h" data-i18n-html="ak-hero-h2">Stop chatting about it.<br>Start seeing your people.</h2>
                 <p data-i18n="ak-hero-p">aKlick turns “we should hang out” into a real plan. Pick a place, invite everyone with one link, see who’s in, then go. From Tuesday coffee to trips abroad.</p>
                 <div class="ak-btns">
@@ -331,7 +333,7 @@
 
             <!-- CTA -->
             <section class="ak-cta">
-              <img class="ak-logo" src="../assets/images/aklick/aklick-logo.png" alt="aKlick" width="88" height="88" style="margin:0 auto 18px;">
+              <img class="ak-logo" src="../assets/images/aklick/aklick-logo.png" alt="aKlick" width="88" height="88" style="width:88px;height:88px;margin:0 auto 18px;">
               <h3 data-i18n="ak-cta-h3">Make the plan. Bring everyone.</h3>
               <p data-i18n="ak-cta-p">It’s free and takes a moment to set up. Make your first plan now, and see your people this week.</p>
               <div class="ak-btns">
