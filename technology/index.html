@@ -76,6 +76,29 @@
     ]
   }
   </script>
+  <style>
+    .pc-plat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0 8px; }
+    .pc-plat-card { border: 1px solid #e6d4f5; background: #faf7fd; border-radius: 16px; padding: 28px 26px; display: flex; flex-direction: column; }
+    .pc-plat-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .pc-plat-head h4 { margin: 2px 0 0; font-size: 1.4rem; }
+    .pc-plat-head h4 a { color: #151515; text-decoration: none; }
+    .pc-plat-logo { width: 52px !important; height: 52px !important; max-width: none !important; border-radius: 12px; flex: 0 0 52px; }
+    .pc-plat-tag { display: inline-block; font-size: .72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #8228CF; }
+    .pc-plat-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 6px 0 18px; }
+    .pc-plat-stat { background: #fff; border-radius: 10px; padding: 12px 10px; text-align: center; }
+    .pc-plat-stat strong { display: block; font-size: 1.35rem; color: #8228CF; line-height: 1.2; }
+    .pc-plat-stat span { display: block; font-size: .78rem; color: #555; line-height: 1.35; margin-top: 4px; }
+    .pc-plat-list { list-style: none; padding: 0; margin: 0 0 14px; }
+    .pc-plat-list li { position: relative; padding: 5px 0 5px 26px; color: #444; font-size: .95rem; line-height: 1.5; }
+    .pc-plat-list li::before { content: ""; position: absolute; left: 5px; top: 10px; width: 6px; height: 11px; border-right: 2px solid #8228CF; border-bottom: 2px solid #8228CF; transform: rotate(40deg); }
+    .pc-plat-note { font-size: .92rem; color: #666; font-style: italic; }
+    .pc-plat-btns { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; padding-top: 6px; }
+    .pc-plat-btn { display: inline-block; background: #8228CF; color: #fff !important; border: 2px solid #8228CF; font-weight: 600; padding: 10px 20px; border-radius: 8px; text-decoration: none !important; font-size: .95rem; }
+    .pc-plat-btn:hover { background: #6c1fb0; border-color: #6c1fb0; }
+    .pc-plat-btn--ghost { background: transparent; color: #8228CF !important; }
+    .pc-plat-btn--ghost:hover { background: #8228CF; color: #fff !important; }
+    @media (max-width: 860px) { .pc-plat-grid { grid-template-columns: 1fr; } }
+  </style>
   </head>
   <body>
     <a href="#main-content" class="skip-nav" data-i18n="skip-nav">Skip to main content</a>
@@ -188,14 +211,56 @@
                 <hr width="100%" size="1" color="#f0f0f0" noshade>
                 <h3 data-i18n="tech-sel-h3">Selected Work and Services</h3>
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-12">
                     <h4><a href="https://pebbleai.ca/" target="_blank" rel="noopener">Pebble AI</a></h4>
                     <p data-i18n="tech-pebbleai-p1">Enterprise services spanning AI transformation, data platforms, data engineering, warehousing, data management, reporting and dashboards, and training, delivered on the Microsoft technology stack.</p>
                   </div>
-                  <div class="col-md-6">
-                    <h4><a href="https://www.madebycanadians.ca/" target="_blank" rel="noopener">Made by Canadians</a></h4>
-                    <p data-i18n="tech-mbc-p1">A marketplace initiative that connects customers to Canadian made products and businesses, strengthening domestic supplier discovery and participation.</p>
-                  </div>
+                </div>
+
+                <hr width="100%" size="1" color="#f0f0f0" noshade>
+                <p class="pc-section-eyebrow" data-i18n="tech-plat-eyebrow">Built in-house</p>
+                <h3 style="margin-top:4px;" data-i18n="tech-plat-h3">Our Platforms</h3>
+                <p data-i18n="tech-plat-intro">Alongside client delivery, Pebble Canada builds and operates its own consumer platforms from Toronto. They put the same engineering, data and AI capability we bring to clients to work for Canadians every day.</p>
+                <div class="pc-plat-grid">
+                  <article class="pc-plat-card">
+                    <div class="pc-plat-head">
+                      <img class="pc-plat-logo" src="../assets/images/aklick/aklick-logo.png" alt="" width="52" height="52" style="width:52px;height:52px;">
+                      <div><span class="pc-plat-tag" data-i18n="tech-ak-tag">Group planning app</span><h4><a href="/aklick/">aKlick</a></h4></div>
+                    </div>
+                    <p data-i18n="tech-ak-p1">Getting a group to agree on a plan takes longer than the plan itself. aKlick puts the deciding and the talking in one place. A plan is a place, a time and the people coming, and it arrives with its own group chat, Going, Maybe or Can’t answers, the forecast for the hour, directions and a reminder.</p>
+                    <div class="pc-plat-stats"><div class="pc-plat-stat"><strong>2.3M</strong><span data-i18n="tech-ak-s1">places worldwide</span></div><div class="pc-plat-stat"><strong>125,000</strong><span data-i18n="tech-ak-s2">places across every Canadian province and territory</span></div><div class="pc-plat-stat"><strong>3</strong><span data-i18n="tech-ak-s3">platforms: web, iOS and Android</span></div></div>
+                    <ul class="pc-plat-list">
+                      <li data-i18n="tech-ak-li1">Help me choose suggests nearby places by kind, cuisine and distance, and a poll settles it</li>
+                      <li data-i18n="tech-ak-li2">Multi-stop plans draw the route and give each stop a leave-by time</li>
+                      <li data-i18n="tech-ak-li3">Group voice and video calls, shared checklists and check-in on arrival</li>
+                      <li data-i18n="tech-ak-li4">Works offline: plans, chats and saved places open right from the phone</li>
+                      <li data-i18n="tech-ak-li5">Free for members, with no advertising trackers, and personal information is never sold</li>
+                    </ul>
+                    <p class="pc-plat-note" data-i18n="tech-ak-p2">Built and operated on our own infrastructure, including the place catalogue, address search, routing, messaging and call relay.</p>
+                    <div class="pc-plat-btns">
+                      <a class="pc-plat-btn" href="https://aklick.ai" target="_blank" rel="noopener" data-i18n="tech-ak-btn1">Visit aklick.ai</a>
+                      <a class="pc-plat-btn pc-plat-btn--ghost" href="/aklick/" data-i18n="tech-ak-btn2">Learn more</a>
+                    </div>
+                  </article>
+                  <article class="pc-plat-card">
+                    <div class="pc-plat-head">
+                      <img class="pc-plat-logo" src="../assets/images/madebycanadians/mbc-logo.png" alt="" width="52" height="52" style="width:52px;height:52px;">
+                      <div><span class="pc-plat-tag" data-i18n="tech-mbc-tag">Canadian product discovery</span><h4><a href="https://www.madebycanadians.ca/" target="_blank" rel="noopener">Made by Canadians</a></h4></div>
+                    </div>
+                    <p data-i18n="tech-mbc-p2">Buying Canadian is easy to intend and hard to do. Made by Canadians brings the catalogues of Canadian-owned businesses into one searchable index, with current pricing and direct links to the retailer of record. It is an aggregator, not a merchant: every purchase completes on the retailer’s own site.</p>
+                    <div class="pc-plat-stats"><div class="pc-plat-stat"><strong>42,091</strong><span data-i18n="tech-mbc-s1">products</span></div><div class="pc-plat-stat"><strong>1,072</strong><span data-i18n="tech-mbc-s2">Canadian-owned businesses</span></div><div class="pc-plat-stat"><strong>12</strong><span data-i18n="tech-mbc-s3">provinces and territories</span></div></div>
+                    <ul class="pc-plat-list">
+                      <li data-i18n="tech-mbc-li1">Eligibility is based on Canadian ownership, verified against public corporate records</li>
+                      <li data-i18n="tech-mbc-li2">No advertising, no affiliate links and no commission. Listings and placement cannot be bought</li>
+                      <li data-i18n="tech-mbc-li3">Listing is free for every Canadian-owned business</li>
+                      <li data-i18n="tech-mbc-li4">Full-text and semantic search, with automated price monitoring across supplier feeds</li>
+                      <li data-i18n="tech-mbc-li5">Bilingual listings for Québec makers, plus iOS and Android apps with a barcode scanner</li>
+                    </ul>
+                    <p class="pc-plat-note" data-i18n="tech-mbc-p3">An open connector lets AI assistants search the catalogue directly and cite it when answering shopping questions.</p>
+                    <div class="pc-plat-btns">
+                      <a class="pc-plat-btn" href="https://www.madebycanadians.ca/" target="_blank" rel="noopener" data-i18n="tech-mbc-btn1">Visit madebycanadians.ca</a>
+                    </div>
+                  </article>
                 </div>
 
                 <hr width="100%" size="1" color="#f0f0f0" noshade>
@@ -353,8 +418,8 @@
     <script type="text/javascript" src='../assets/js/jquery-3.2.1.min.js'></script>
     <script type="text/javascript" src='../assets/js/plugins.min.js'></script>
     <script type="text/javascript" src="../assets/js/main.js"></script>
-    <script type="text/javascript" src="../assets/js/lang.js?v=20261031e"></script>
-    <script src="../assets/js/search-data.js?v=20261031e"></script>
-    <script src="../assets/js/search.js?v=20261031e"></script>
+    <script type="text/javascript" src="../assets/js/lang.js?v=20261103"></script>
+    <script src="../assets/js/search-data.js?v=20261103"></script>
+    <script src="../assets/js/search.js?v=20261103"></script>
   </body>
 </html>
