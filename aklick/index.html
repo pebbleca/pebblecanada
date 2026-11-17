@@ -72,6 +72,10 @@
       .ak-btn-outline { background: transparent; color: #8228CF; border: 2px solid #8228CF; }
       .ak-btn-outline:hover { color: #fff; background: #8228CF; }
 
+      .ak-video { max-width: 880px; margin: 0 auto 80px; text-align: center; }
+      .ak-video h3 { font-size: 1.8rem; margin: 0 0 22px; }
+      .ak-video-frame { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; background: #000; box-shadow: 0 24px 60px rgba(10, 60, 110, 0.18); }
+      .ak-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
       .ak-intro { text-align: center; max-width: 720px; margin: 0 auto 72px; }
       .ak-eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #8228CF; margin: 0 0 10px; }
       .ak-intro h3 { font-size: 2rem; margin: 0 0 16px; }
@@ -205,6 +209,15 @@
                 <div class="ak-btns">
                   <a class="ak-btn ak-btn-lime" href="https://aklick.ai" target="_blank" rel="noopener" data-i18n="ak-btn-open">Open aKlick</a>
                 </div>
+              </div>
+            </section>
+
+            <!-- Video -->
+            <section class="ak-video" aria-labelledby="ak-video-h">
+              <p class="ak-eyebrow" style="text-align:center;" data-i18n="ak-video-eyebrow">Watch</p>
+              <h3 id="ak-video-h" data-i18n="ak-video-h3">See aKlick in action</h3>
+              <div class="ak-video-frame">
+                <iframe src="https://www.youtube-nocookie.com/embed/MsFXpTCDnTQ?rel=0" title="aKlick video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
             </section>
 
@@ -361,8 +374,8 @@
     <script type="text/javascript" src='../assets/js/jquery-3.2.1.min.js'></script>
     <script type="text/javascript" src='../assets/js/plugins.min.js'></script>
     <script type="text/javascript" src="../assets/js/main.js"></script>
-    <script type="text/javascript" src="../assets/js/lang.js?v=20261103"></script>
-    <script src="../assets/js/search-data.js?v=20261103"></script>
-    <script src="../assets/js/search.js?v=20261103"></script>
+    <script type="text/javascript" src="../assets/js/lang.js?v=20261117"></script>
+    <script src="../assets/js/search-data.js?v=20261117"></script>
+    <script src="../assets/js/search.js?v=20261117"></script>
   </body>
 </html>
